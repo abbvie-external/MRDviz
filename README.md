@@ -52,11 +52,11 @@ This package is licensed under the MIT License - see the LICENSE file for detail
 ## Author
 
 **KB Choi, Ph.D**  
-AbbVie
+Bioinformatics, GRC
 
 ## Version
 
-Current version: 0.2.0
+Current version: 0.3.1
 
 ## Contributing
 
