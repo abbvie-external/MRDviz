@@ -1,0 +1,2721 @@
+{
+  "title": "MRD trajectories",
+  "xlab": "Time",
+  "ylab": "Measurement",
+  "covariates": {
+    "Z1": {
+      "NA": [],
+      "1": [],
+      "0": []
+    },
+    "OS": {
+      "Censor": [],
+      "Event": []
+    },
+    "relapse_status": {
+      "No Relapse": [],
+      "Relapse": []
+    },
+    "group": {
+      "CR": [],
+      "PR": [],
+      "SD": []
+    }
+  },
+  "time_variant_covariates": {
+    "MRD_negativity": {
+      "MRD+": [],
+      "MRD-": []
+    }
+  },
+  "subjects": [
+    {
+      "id": "CR_001",
+      "covariates": {
+        "Z1": "NA",
+        "Z2": 0.0169,
+        "eventtime_OS": 10,
+        "OS": "Censor",
+        "relapse_status": "No Relapse",
+        "relapse_time": "NA",
+        "group": "CR"
+      },
+      "data": [
+        {
+          "time": 0,
+          "value": 18.3629,
+          "Xij_1": 22.2705,
+          "MRD_negativity": "MRD+"
+        },
+        {
+          "time": 2,
+          "value": 0.1678,
+          "Xij_1": 0.1227,
+          "MRD_negativity": "MRD-"
+        },
+        {
+          "time": 2.3787,
+          "value": 0.0925,
+          "Xij_1": 0.1227,
+          "MRD_negativity": "MRD-"
+        },
+        {
+          "time": 2.8492,
+          "value": 0.0886,
+          "Xij_1": 0.1227,
+          "MRD_negativity": "MRD-"
+        },
+        {
+          "time": 3.7662,
+          "value": 0.205,
+          "Xij_1": 0.1227,
+          "MRD_negativity": "MRD-"
+        },
+        {
+          "time": 4.0489,
+          "value": 0.2154,
+          "Xij_1": 0.1227,
+          "MRD_negativity": "MRD-"
+        },
+        {
+          "time": 4.8616,
+          "value": 0.074,
+          "Xij_1": 0.1227,
+          "MRD_negativity": "MRD-"
+        },
+        {
+          "time": 5.5188,
+          "value": 0.1127,
+          "Xij_1": 0.1227,
+          "MRD_negativity": "MRD-"
+        },
+        {
+          "time": 6.0583,
+          "value": 0.2334,
+          "Xij_1": 0.1227,
+          "MRD_negativity": "MRD-"
+        },
+        {
+          "time": 6.861,
+          "value": 0.0743,
+          "Xij_1": 0.1227,
+          "MRD_negativity": "MRD-"
+        },
+        {
+          "time": 7.2111,
+          "value": 0.0716,
+          "Xij_1": 0.1227,
+          "MRD_negativity": "MRD-"
+        },
+        {
+          "time": 7.3266,
+          "value": 0.1836,
+          "Xij_1": 0.1227,
+          "MRD_negativity": "MRD-"
+        },
+        {
+          "time": 7.8068,
+          "value": 0.1776,
+          "Xij_1": 0.1227,
+          "MRD_negativity": "MRD-"
+        },
+        {
+          "time": 8.1568,
+          "value": 0.0774,
+          "Xij_1": 0.1227,
+          "MRD_negativity": "MRD-"
+        },
+        {
+          "time": 8.5134,
+          "value": 0.3522,
+          "Xij_1": 0.1227,
+          "MRD_negativity": "MRD-"
+        }
+      ]
+    },
+    {
+      "id": "CR_002",
+      "covariates": {
+        "Z1": "1",
+        "Z2": -0.3676,
+        "eventtime_OS": 10,
+        "OS": "Censor",
+        "relapse_status": "No Relapse",
+        "relapse_time": "NA",
+        "group": "CR"
+      },
+      "data": [
+        {
+          "time": 0,
+          "value": 7.1048,
+          "Xij_1": 14.9596,
+          "MRD_negativity": "MRD+"
+        },
+        {
+          "time": 0.8381,
+          "value": 0.7594,
+          "Xij_1": 1.9447,
+          "MRD_negativity": "MRD+"
+        },
+        {
+          "time": 1.0246,
+          "value": 0.6361,
+          "Xij_1": 1.2348,
+          "MRD_negativity": "MRD+"
+        },
+        {
+          "time": 1.6327,
+          "value": 0.3645,
+          "Xij_1": 0.281,
+          "MRD_negativity": "MRD-"
+        },
+        {
+          "time": 2,
+          "value": 0.0758,
+          "Xij_1": 0.1149,
+          "MRD_negativity": "MRD-"
+        },
+        {
+          "time": 2.0681,
+          "value": 0.1645,
+          "Xij_1": 0.1149,
+          "MRD_negativity": "MRD-"
+        },
+        {
+          "time": 2.0982,
+          "value": 0.0455,
+          "Xij_1": 0.1149,
+          "MRD_negativity": "MRD-"
+        },
+        {
+          "time": 2.9984,
+          "value": 0.1073,
+          "Xij_1": 0.1149,
+          "MRD_negativity": "MRD-"
+        },
+        {
+          "time": 3.4528,
+          "value": 0.1803,
+          "Xij_1": 0.1149,
+          "MRD_negativity": "MRD-"
+        },
+        {
+          "time": 4.5996,
+          "value": 0.0555,
+          "Xij_1": 0.1149,
+          "MRD_negativity": "MRD-"
+        },
+        {
+          "time": 4.711,
+          "value": 0.1067,
+          "Xij_1": 0.1149,
+          "MRD_negativity": "MRD-"
+        },
+        {
+          "time": 7.8734,
+          "value": 0.1319,
+          "Xij_1": 0.1149,
+          "MRD_negativity": "MRD-"
+        },
+        {
+          "time": 8.3023,
+          "value": 0.2026,
+          "Xij_1": 0.1149,
+          "MRD_negativity": "MRD-"
+        },
+        {
+          "time": 9.0705,
+          "value": 0.0925,
+          "Xij_1": 0.1149,
+          "MRD_negativity": "MRD-"
+        },
+        {
+          "time": 9.6429,
+          "value": 0.1654,
+          "Xij_1": 0.1149,
+          "MRD_negativity": "MRD-"
+        }
+      ]
+    },
+    {
+      "id": "CR_003",
+      "covariates": {
+        "Z1": "0",
+        "Z2": -0.3907,
+        "eventtime_OS": 10,
+        "OS": "Censor",
+        "relapse_status": "No Relapse",
+        "relapse_time": "NA",
+        "group": "CR"
+      },
+      "data": [
+        {
+          "time": 0,
+          "value": 22.7562,
+          "Xij_1": 25.3496,
+          "MRD_negativity": "MRD+"
+        },
+        {
+          "time": 0.5278,
+          "value": 4.4757,
+          "Xij_1": 6.1984,
+          "MRD_negativity": "MRD+"
+        },
+        {
+          "time": 0.691,
+          "value": 5.9984,
+          "Xij_1": 4.0091,
+          "MRD_negativity": "MRD+"
+        },
+        {
+          "time": 0.8716,
+          "value": 1.5531,
+          "Xij_1": 2.4759,
+          "MRD_negativity": "MRD+"
+        },
+        {
+          "time": 1.1754,
+          "value": 1.287,
+          "Xij_1": 1.1006,
+          "MRD_negativity": "MRD+"
+        },
+        {
+          "time": 2,
+          "value": 0.1856,
+          "Xij_1": 0.1219,
+          "MRD_negativity": "MRD-"
+        },
+        {
+          "time": 3.4304,
+          "value": 0.1363,
+          "Xij_1": 0.1219,
+          "MRD_negativity": "MRD-"
+        },
+        {
+          "time": 4.2249,
+          "value": 0.0945,
+          "Xij_1": 0.1219,
+          "MRD_negativity": "MRD-"
+        },
+        {
+          "time": 4.2652,
+          "value": 0.0715,
+          "Xij_1": 0.1219,
+          "MRD_negativity": "MRD-"
+        },
+        {
+          "time": 5.1044,
+          "value": 0.0719,
+          "Xij_1": 0.1219,
+          "MRD_negativity": "MRD-"
+        },
+        {
+          "time": 6.0153,
+          "value": 0.1843,
+          "Xij_1": 0.1219,
+          "MRD_negativity": "MRD-"
+        },
+        {
+          "time": 6.1145,
+          "value": 0.0914,
+          "Xij_1": 0.1219,
+          "MRD_negativity": "MRD-"
+        },
+        {
+          "time": 7.1725,
+          "value": 0.2031,
+          "Xij_1": 0.1219,
+          "MRD_negativity": "MRD-"
+        },
+        {
+          "time": 8.511,
+          "value": 0.0688,
+          "Xij_1": 0.1219,
+          "MRD_negativity": "MRD-"
+        },
+        {
+          "time": 9.5613,
+          "value": 0.126,
+          "Xij_1": 0.1219,
+          "MRD_negativity": "MRD-"
+        }
+      ]
+    },
+    {
+      "id": "CR_004",
+      "covariates": {
+        "Z1": "0",
+        "Z2": -0.6353,
+        "eventtime_OS": 10,
+        "OS": "Censor",
+        "relapse_status": "No Relapse",
+        "relapse_time": "NA",
+        "group": "CR"
+      },
+      "data": [
+        {
+          "time": 0,
+          "value": 22.6411,
+          "Xij_1": 14.4268,
+          "MRD_negativity": "MRD+"
+        },
+        {
+          "time": 0.289,
+          "value": 10.2107,
+          "Xij_1": 7.663,
+          "MRD_negativity": "MRD+"
+        },
+        {
+          "time": 0.4274,
+          "value": 4.2408,
+          "Xij_1": 5.6601,
+          "MRD_negativity": "MRD+"
+        },
+        {
+          "time": 0.8791,
+          "value": 3.2764,
+          "Xij_1": 2.1051,
+          "MRD_negativity": "MRD+"
+        },
+        {
+          "time": 2,
+          "value": 0.2075,
+          "Xij_1": 0.1809,
+          "MRD_negativity": "MRD-"
+        },
+        {
+          "time": 2.1791,
+          "value": 0.1435,
+          "Xij_1": 0.1809,
+          "MRD_negativity": "MRD-"
+        },
+        {
+          "time": 2.8356,
+          "value": 0.1816,
+          "Xij_1": 0.1809,
+          "MRD_negativity": "MRD-"
+        },
+        {
+          "time": 3.17,
+          "value": 0.1552,
+          "Xij_1": 0.1809,
+          "MRD_negativity": "MRD-"
+        },
+        {
+          "time": 3.8427,
+          "value": 0.4089,
+          "Xij_1": 0.1809,
+          "MRD_negativity": "MRD-"
+        },
+        {
+          "time": 6.0227,
+          "value": 0.2962,
+          "Xij_1": 0.1809,
+          "MRD_negativity": "MRD-"
+        },
+        {
+          "time": 6.7994,
+          "value": 0.1883,
+          "Xij_1": 0.1809,
+          "MRD_negativity": "MRD-"
+        },
+        {
+          "time": 7.8227,
+          "value": 0.1352,
+          "Xij_1": 0.1809,
+          "MRD_negativity": "MRD-"
+        },
+        {
+          "time": 8.0061,
+          "value": 0.7065,
+          "Xij_1": 0.1809,
+          "MRD_negativity": "MRD+"
+        },
+        {
+          "time": 8.0791,
+          "value": 0.2567,
+          "Xij_1": 0.1809,
+          "MRD_negativity": "MRD-"
+        },
+        {
+          "time": 8.9488,
+          "value": 0.153,
+          "Xij_1": 0.1809,
+          "MRD_negativity": "MRD-"
+        }
+      ]
+    },
+    {
+      "id": "CR_005",
+      "covariates": {
+        "Z1": "0",
+        "Z2": 0.8021,
+        "eventtime_OS": 9.52,
+        "OS": "Event",
+        "relapse_status": "Relapse",
+        "relapse_time": 5.94,
+        "group": "CR"
+      },
+      "data": [
+        {
+          "time": 0,
+          "value": 31.4272,
+          "Xij_1": 14.477,
+          "MRD_negativity": "MRD+"
+        },
+        {
+          "time": 1.3986,
+          "value": 0.3971,
+          "Xij_1": 0.4797,
+          "MRD_negativity": "MRD-"
+        },
+        {
+          "time": 1.6115,
+          "value": 0.3104,
+          "Xij_1": 0.2856,
+          "MRD_negativity": "MRD-"
+        },
+        {
+          "time": 1.9885,
+          "value": 0.1067,
+          "Xij_1": 0.114,
+          "MRD_negativity": "MRD-"
+        },
+        {
+          "time": 2,
+          "value": 0.138,
+          "Xij_1": 0.1109,
+          "MRD_negativity": "MRD-"
+        },
+        {
+          "time": 2.0222,
+          "value": 0.1125,
+          "Xij_1": 0.1109,
+          "MRD_negativity": "MRD-"
+        },
+        {
+          "time": 2.4975,
+          "value": 0.2259,
+          "Xij_1": 0.1109,
+          "MRD_negativity": "MRD-"
+        },
+        {
+          "time": 3.4633,
+          "value": 0.0964,
+          "Xij_1": 0.1109,
+          "MRD_negativity": "MRD-"
+        },
+        {
+          "time": 3.7414,
+          "value": 0.1611,
+          "Xij_1": 0.1109,
+          "MRD_negativity": "MRD-"
+        },
+        {
+          "time": 3.9926,
+          "value": 0.0392,
+          "Xij_1": 0.1109,
+          "MRD_negativity": "MRD-"
+        },
+        {
+          "time": 4.8692,
+          "value": 0.0804,
+          "Xij_1": 0.1109,
+          "MRD_negativity": "MRD-"
+        },
+        {
+          "time": 7.1178,
+          "value": 0.7433,
+          "Xij_1": 0.3583,
+          "MRD_negativity": "MRD+"
+        },
+        {
+          "time": 7.9989,
+          "value": 0.2564,
+          "Xij_1": 0.8647,
+          "MRD_negativity": "MRD-"
+        },
+        {
+          "time": 8.1094,
+          "value": 0.7643,
+          "Xij_1": 0.9658,
+          "MRD_negativity": "MRD+"
+        },
+        {
+          "time": 9.4874,
+          "value": 3.1899,
+          "Xij_1": 3.8311,
+          "MRD_negativity": "MRD+"
+        }
+      ]
+    },
+    {
+      "id": "CR_006",
+      "covariates": {
+        "Z1": "0",
+        "Z2": 0.1588,
+        "eventtime_OS": 10,
+        "OS": "Censor",
+        "relapse_status": "Relapse",
+        "relapse_time": 5.86,
+        "group": "CR"
+      },
+      "data": [
+        {
+          "time": 0,
+          "value": 38.7726,
+          "Xij_1": 17.952,
+          "MRD_negativity": "MRD+"
+        },
+        {
+          "time": 0.2405,
+          "value": 9.0419,
+          "Xij_1": 9.9099,
+          "MRD_negativity": "MRD+"
+        },
+        {
+          "time": 0.99,
+          "value": 1.4093,
+          "Xij_1": 1.5552,
+          "MRD_negativity": "MRD+"
+        },
+        {
+          "time": 1.1111,
+          "value": 2.0949,
+          "Xij_1": 1.1531,
+          "MRD_negativity": "MRD+"
+        },
+        {
+          "time": 1.4211,
+          "value": 0.364,
+          "Xij_1": 0.536,
+          "MRD_negativity": "MRD-"
+        },
+        {
+          "time": 2,
+          "value": 0.1764,
+          "Xij_1": 0.1282,
+          "MRD_negativity": "MRD-"
+        },
+        {
+          "time": 2.1535,
+          "value": 0.1057,
+          "Xij_1": 0.1282,
+          "MRD_negativity": "MRD-"
+        },
+        {
+          "time": 2.2406,
+          "value": 0.2138,
+          "Xij_1": 0.1282,
+          "MRD_negativity": "MRD-"
+        },
+        {
+          "time": 3.668,
+          "value": 0.1054,
+          "Xij_1": 0.1282,
+          "MRD_negativity": "MRD-"
+        },
+        {
+          "time": 4.6577,
+          "value": 0.1855,
+          "Xij_1": 0.1282,
+          "MRD_negativity": "MRD-"
+        },
+        {
+          "time": 4.8947,
+          "value": 0.2135,
+          "Xij_1": 0.1282,
+          "MRD_negativity": "MRD-"
+        },
+        {
+          "time": 5.6446,
+          "value": 0.1438,
+          "Xij_1": 0.1282,
+          "MRD_negativity": "MRD-"
+        },
+        {
+          "time": 6.106,
+          "value": 0.1124,
+          "Xij_1": 0.1648,
+          "MRD_negativity": "MRD-"
+        },
+        {
+          "time": 7.1128,
+          "value": 0.5036,
+          "Xij_1": 0.451,
+          "MRD_negativity": "MRD+"
+        },
+        {
+          "time": 8.5449,
+          "value": 1.5335,
+          "Xij_1": 1.8887,
+          "MRD_negativity": "MRD+"
+        }
+      ]
+    },
+    {
+      "id": "CR_007",
+      "covariates": {
+        "Z1": "1",
+        "Z2": 0.2342,
+        "eventtime_OS": 10,
+        "OS": "Censor",
+        "relapse_status": "No Relapse",
+        "relapse_time": "NA",
+        "group": "CR"
+      },
+      "data": [
+        {
+          "time": 0,
+          "value": 17.3446,
+          "Xij_1": 19.9582,
+          "MRD_negativity": "MRD+"
+        },
+        {
+          "time": 0.4102,
+          "value": 2.893,
+          "Xij_1": 7.2823,
+          "MRD_negativity": "MRD+"
+        },
+        {
+          "time": 0.6187,
+          "value": 5.9413,
+          "Xij_1": 4.362,
+          "MRD_negativity": "MRD+"
+        },
+        {
+          "time": 1.6992,
+          "value": 0.7433,
+          "Xij_1": 0.3064,
+          "MRD_negativity": "MRD+"
+        },
+        {
+          "time": 2,
+          "value": 0.0933,
+          "Xij_1": 0.1463,
+          "MRD_negativity": "MRD-"
+        },
+        {
+          "time": 2.0655,
+          "value": 0.1686,
+          "Xij_1": 0.1463,
+          "MRD_negativity": "MRD-"
+        },
+        {
+          "time": 2.2821,
+          "value": 0.1369,
+          "Xij_1": 0.1463,
+          "MRD_negativity": "MRD-"
+        },
+        {
+          "time": 2.3965,
+          "value": 0.1242,
+          "Xij_1": 0.1463,
+          "MRD_negativity": "MRD-"
+        },
+        {
+          "time": 3.6008,
+          "value": 0.0724,
+          "Xij_1": 0.1463,
+          "MRD_negativity": "MRD-"
+        },
+        {
+          "time": 4.506,
+          "value": 0.286,
+          "Xij_1": 0.1463,
+          "MRD_negativity": "MRD-"
+        },
+        {
+          "time": 4.6032,
+          "value": 0.1336,
+          "Xij_1": 0.1463,
+          "MRD_negativity": "MRD-"
+        },
+        {
+          "time": 5.1926,
+          "value": 0.1743,
+          "Xij_1": 0.1463,
+          "MRD_negativity": "MRD-"
+        },
+        {
+          "time": 6.3471,
+          "value": 0.1688,
+          "Xij_1": 0.1463,
+          "MRD_negativity": "MRD-"
+        },
+        {
+          "time": 8.3395,
+          "value": 0.1708,
+          "Xij_1": 0.1463,
+          "MRD_negativity": "MRD-"
+        },
+        {
+          "time": 8.4235,
+          "value": 0.0478,
+          "Xij_1": 0.1463,
+          "MRD_negativity": "MRD-"
+        }
+      ]
+    },
+    {
+      "id": "CR_008",
+      "covariates": {
+        "Z1": "1",
+        "Z2": -0.4708,
+        "eventtime_OS": 10,
+        "OS": "Censor",
+        "relapse_status": "No Relapse",
+        "relapse_time": "NA",
+        "group": "CR"
+      },
+      "data": [
+        {
+          "time": 0,
+          "value": 11.0162,
+          "Xij_1": 19.5948,
+          "MRD_negativity": "MRD+"
+        },
+        {
+          "time": 1.0405,
+          "value": 2.8523,
+          "Xij_1": 1.5938,
+          "MRD_negativity": "MRD+"
+        },
+        {
+          "time": 1.279,
+          "value": 0.7725,
+          "Xij_1": 0.8969,
+          "MRD_negativity": "MRD+"
+        },
+        {
+          "time": 1.5507,
+          "value": 0.5652,
+          "Xij_1": 0.4657,
+          "MRD_negativity": "MRD+"
+        },
+        {
+          "time": 2,
+          "value": 0.11,
+          "Xij_1": 0.1576,
+          "MRD_negativity": "MRD-"
+        },
+        {
+          "time": 2.4113,
+          "value": 0.0284,
+          "Xij_1": 0.1576,
+          "MRD_negativity": "MRD-"
+        },
+        {
+          "time": 3.081,
+          "value": 0.3191,
+          "Xij_1": 0.1576,
+          "MRD_negativity": "MRD-"
+        },
+        {
+          "time": 4.7394,
+          "value": 0.1435,
+          "Xij_1": 0.1576,
+          "MRD_negativity": "MRD-"
+        },
+        {
+          "time": 4.8854,
+          "value": 0.2319,
+          "Xij_1": 0.1576,
+          "MRD_negativity": "MRD-"
+        },
+        {
+          "time": 6.5739,
+          "value": 0.1373,
+          "Xij_1": 0.1576,
+          "MRD_negativity": "MRD-"
+        },
+        {
+          "time": 7.187,
+          "value": 0.2043,
+          "Xij_1": 0.1576,
+          "MRD_negativity": "MRD-"
+        },
+        {
+          "time": 7.7717,
+          "value": 0.1606,
+          "Xij_1": 0.1576,
+          "MRD_negativity": "MRD-"
+        },
+        {
+          "time": 8.5305,
+          "value": 0.2786,
+          "Xij_1": 0.1576,
+          "MRD_negativity": "MRD-"
+        },
+        {
+          "time": 9.6031,
+          "value": 0.1407,
+          "Xij_1": 0.1576,
+          "MRD_negativity": "MRD-"
+        },
+        {
+          "time": 9.7267,
+          "value": 0.2081,
+          "Xij_1": 0.1576,
+          "MRD_negativity": "MRD-"
+        }
+      ]
+    },
+    {
+      "id": "CR_009",
+      "covariates": {
+        "Z1": "1",
+        "Z2": -0.1386,
+        "eventtime_OS": 10,
+        "OS": "Censor",
+        "relapse_status": "No Relapse",
+        "relapse_time": "NA",
+        "group": "CR"
+      },
+      "data": [
+        {
+          "time": 0,
+          "value": 55.3677,
+          "Xij_1": 26.633,
+          "MRD_negativity": "MRD+"
+        },
+        {
+          "time": 0.8508,
+          "value": 5.7845,
+          "Xij_1": 2.7152,
+          "MRD_negativity": "MRD+"
+        },
+        {
+          "time": 1.55,
+          "value": 0.5291,
+          "Xij_1": 0.4159,
+          "MRD_negativity": "MRD+"
+        },
+        {
+          "time": 2,
+          "value": 0.1489,
+          "Xij_1": 0.1243,
+          "MRD_negativity": "MRD-"
+        },
+        {
+          "time": 2.19,
+          "value": 0.064,
+          "Xij_1": 0.1243,
+          "MRD_negativity": "MRD-"
+        },
+        {
+          "time": 2.6001,
+          "value": 0.1741,
+          "Xij_1": 0.1243,
+          "MRD_negativity": "MRD-"
+        },
+        {
+          "time": 2.8546,
+          "value": 0.0436,
+          "Xij_1": 0.1243,
+          "MRD_negativity": "MRD-"
+        },
+        {
+          "time": 3.1912,
+          "value": 0.0889,
+          "Xij_1": 0.1243,
+          "MRD_negativity": "MRD-"
+        },
+        {
+          "time": 3.6218,
+          "value": 0.0643,
+          "Xij_1": 0.1243,
+          "MRD_negativity": "MRD-"
+        },
+        {
+          "time": 4.2902,
+          "value": 0.1196,
+          "Xij_1": 0.1243,
+          "MRD_negativity": "MRD-"
+        },
+        {
+          "time": 4.6023,
+          "value": 0.0647,
+          "Xij_1": 0.1243,
+          "MRD_negativity": "MRD-"
+        },
+        {
+          "time": 6.6831,
+          "value": 0.255,
+          "Xij_1": 0.1243,
+          "MRD_negativity": "MRD-"
+        },
+        {
+          "time": 7.0159,
+          "value": 0.1388,
+          "Xij_1": 0.1243,
+          "MRD_negativity": "MRD-"
+        },
+        {
+          "time": 7.0539,
+          "value": 0.1551,
+          "Xij_1": 0.1243,
+          "MRD_negativity": "MRD-"
+        },
+        {
+          "time": 8.4202,
+          "value": 0.0505,
+          "Xij_1": 0.1243,
+          "MRD_negativity": "MRD-"
+        }
+      ]
+    },
+    {
+      "id": "CR_010",
+      "covariates": {
+        "Z1": "1",
+        "Z2": 1.1375,
+        "eventtime_OS": 10,
+        "OS": "Censor",
+        "relapse_status": "No Relapse",
+        "relapse_time": "NA",
+        "group": "CR"
+      },
+      "data": [
+        {
+          "time": 0,
+          "value": 23.5933,
+          "Xij_1": 26.7849,
+          "MRD_negativity": "MRD+"
+        },
+        {
+          "time": 0.4431,
+          "value": 13.6028,
+          "Xij_1": 7.7422,
+          "MRD_negativity": "MRD+"
+        },
+        {
+          "time": 1.521,
+          "value": 0.2671,
+          "Xij_1": 0.3781,
+          "MRD_negativity": "MRD-"
+        },
+        {
+          "time": 1.6596,
+          "value": 0.2354,
+          "Xij_1": 0.2564,
+          "MRD_negativity": "MRD-"
+        },
+        {
+          "time": 2,
+          "value": 0.0741,
+          "Xij_1": 0.0988,
+          "MRD_negativity": "MRD-"
+        },
+        {
+          "time": 3.2048,
+          "value": 0.3746,
+          "Xij_1": 0.0988,
+          "MRD_negativity": "MRD-"
+        },
+        {
+          "time": 3.2325,
+          "value": 0.159,
+          "Xij_1": 0.0988,
+          "MRD_negativity": "MRD-"
+        },
+        {
+          "time": 4.0546,
+          "value": 0.0639,
+          "Xij_1": 0.0988,
+          "MRD_negativity": "MRD-"
+        },
+        {
+          "time": 4.4745,
+          "value": 0.1093,
+          "Xij_1": 0.0988,
+          "MRD_negativity": "MRD-"
+        },
+        {
+          "time": 5.6707,
+          "value": 0.1324,
+          "Xij_1": 0.0988,
+          "MRD_negativity": "MRD-"
+        },
+        {
+          "time": 7.1472,
+          "value": 0.161,
+          "Xij_1": 0.0988,
+          "MRD_negativity": "MRD-"
+        },
+        {
+          "time": 7.2709,
+          "value": 0.1055,
+          "Xij_1": 0.0988,
+          "MRD_negativity": "MRD-"
+        },
+        {
+          "time": 7.5135,
+          "value": 0.0594,
+          "Xij_1": 0.0988,
+          "MRD_negativity": "MRD-"
+        },
+        {
+          "time": 8.6275,
+          "value": 0.0549,
+          "Xij_1": 0.0988,
+          "MRD_negativity": "MRD-"
+        },
+        {
+          "time": 8.8457,
+          "value": 0.0916,
+          "Xij_1": 0.0988,
+          "MRD_negativity": "MRD-"
+        }
+      ]
+    },
+    {
+      "id": "PR_001",
+      "covariates": {
+        "Z1": "0",
+        "Z2": -0.226,
+        "eventtime_OS": 10,
+        "OS": "Censor",
+        "relapse_status": "Relapse",
+        "relapse_time": 6.33,
+        "group": "PR"
+      },
+      "data": [
+        {
+          "time": 0,
+          "value": 24.6146,
+          "Xij_1": 22.6117,
+          "MRD_negativity": "MRD+"
+        },
+        {
+          "time": 0.3709,
+          "value": 37.2193,
+          "Xij_1": 12.548,
+          "MRD_negativity": "MRD+"
+        },
+        {
+          "time": 0.5874,
+          "value": 14.9281,
+          "Xij_1": 8.8986,
+          "MRD_negativity": "MRD+"
+        },
+        {
+          "time": 1.004,
+          "value": 4.3341,
+          "Xij_1": 4.593,
+          "MRD_negativity": "MRD+"
+        },
+        {
+          "time": 1.1413,
+          "value": 3.4519,
+          "Xij_1": 3.6931,
+          "MRD_negativity": "MRD+"
+        },
+        {
+          "time": 1.5361,
+          "value": 3.4956,
+          "Xij_1": 1.9735,
+          "MRD_negativity": "MRD+"
+        },
+        {
+          "time": 2,
+          "value": 1.5124,
+          "Xij_1": 0.9448,
+          "MRD_negativity": "MRD+"
+        },
+        {
+          "time": 4.5922,
+          "value": 0.4834,
+          "Xij_1": 0.9448,
+          "MRD_negativity": "MRD-"
+        },
+        {
+          "time": 4.6416,
+          "value": 0.6848,
+          "Xij_1": 0.9448,
+          "MRD_negativity": "MRD+"
+        },
+        {
+          "time": 4.9132,
+          "value": 0.95,
+          "Xij_1": 0.9448,
+          "MRD_negativity": "MRD+"
+        },
+        {
+          "time": 6.5656,
+          "value": 1.1383,
+          "Xij_1": 1.2015,
+          "MRD_negativity": "MRD+"
+        },
+        {
+          "time": 6.6205,
+          "value": 0.8641,
+          "Xij_1": 1.2693,
+          "MRD_negativity": "MRD+"
+        },
+        {
+          "time": 6.8652,
+          "value": 2.2113,
+          "Xij_1": 1.6212,
+          "MRD_negativity": "MRD+"
+        },
+        {
+          "time": 7.0734,
+          "value": 1.0805,
+          "Xij_1": 1.9965,
+          "MRD_negativity": "MRD+"
+        },
+        {
+          "time": 8.7742,
+          "value": 6.4328,
+          "Xij_1": 10.937,
+          "MRD_negativity": "MRD+"
+        }
+      ]
+    },
+    {
+      "id": "PR_002",
+      "covariates": {
+        "Z1": "0",
+        "Z2": 0.5617,
+        "eventtime_OS": 10,
+        "OS": "Censor",
+        "relapse_status": "No Relapse",
+        "relapse_time": "NA",
+        "group": "PR"
+      },
+      "data": [
+        {
+          "time": 0,
+          "value": 12.3089,
+          "Xij_1": 15.3049,
+          "MRD_negativity": "MRD+"
+        },
+        {
+          "time": 0.8685,
+          "value": 4.0163,
+          "Xij_1": 3.9432,
+          "MRD_negativity": "MRD+"
+        },
+        {
+          "time": 0.9824,
+          "value": 3.348,
+          "Xij_1": 3.3005,
+          "MRD_negativity": "MRD+"
+        },
+        {
+          "time": 1.1119,
+          "value": 2.0727,
+          "Xij_1": 2.6965,
+          "MRD_negativity": "MRD+"
+        },
+        {
+          "time": 1.3845,
+          "value": 1.4448,
+          "Xij_1": 1.7617,
+          "MRD_negativity": "MRD+"
+        },
+        {
+          "time": 1.6433,
+          "value": 1.7915,
+          "Xij_1": 1.176,
+          "MRD_negativity": "MRD+"
+        },
+        {
+          "time": 2,
+          "value": 0.2415,
+          "Xij_1": 0.6737,
+          "MRD_negativity": "MRD-"
+        },
+        {
+          "time": 3.2309,
+          "value": 0.3687,
+          "Xij_1": 0.6737,
+          "MRD_negativity": "MRD-"
+        },
+        {
+          "time": 5.1558,
+          "value": 0.7908,
+          "Xij_1": 0.6737,
+          "MRD_negativity": "MRD+"
+        },
+        {
+          "time": 5.162,
+          "value": 0.974,
+          "Xij_1": 0.6737,
+          "MRD_negativity": "MRD+"
+        },
+        {
+          "time": 5.5453,
+          "value": 1.0422,
+          "Xij_1": 0.6737,
+          "MRD_negativity": "MRD+"
+        },
+        {
+          "time": 5.9197,
+          "value": 2.1195,
+          "Xij_1": 0.6737,
+          "MRD_negativity": "MRD+"
+        },
+        {
+          "time": 6.4943,
+          "value": 0.9025,
+          "Xij_1": 0.6737,
+          "MRD_negativity": "MRD+"
+        },
+        {
+          "time": 8.8944,
+          "value": 0.6385,
+          "Xij_1": 0.6737,
+          "MRD_negativity": "MRD+"
+        },
+        {
+          "time": 8.9603,
+          "value": 1.7617,
+          "Xij_1": 0.6737,
+          "MRD_negativity": "MRD+"
+        }
+      ]
+    },
+    {
+      "id": "PR_003",
+      "covariates": {
+        "Z1": "0",
+        "Z2": 2.5474,
+        "eventtime_OS": 7.79,
+        "OS": "Event",
+        "relapse_status": "Relapse",
+        "relapse_time": 6.25,
+        "group": "PR"
+      },
+      "data": [
+        {
+          "time": 0,
+          "value": 13.2437,
+          "Xij_1": 24.375,
+          "MRD_negativity": "MRD+"
+        },
+        {
+          "time": 1.2574,
+          "value": 5.0444,
+          "Xij_1": 2.5547,
+          "MRD_negativity": "MRD+"
+        },
+        {
+          "time": 1.4966,
+          "value": 2.7948,
+          "Xij_1": 1.6634,
+          "MRD_negativity": "MRD+"
+        },
+        {
+          "time": 2,
+          "value": 0.9514,
+          "Xij_1": 0.6742,
+          "MRD_negativity": "MRD+"
+        },
+        {
+          "time": 3.5179,
+          "value": 0.9342,
+          "Xij_1": 0.6742,
+          "MRD_negativity": "MRD+"
+        },
+        {
+          "time": 3.8458,
+          "value": 0.4463,
+          "Xij_1": 0.6742,
+          "MRD_negativity": "MRD-"
+        },
+        {
+          "time": 4.1252,
+          "value": 1.0165,
+          "Xij_1": 0.6742,
+          "MRD_negativity": "MRD+"
+        },
+        {
+          "time": 5.3073,
+          "value": 0.3156,
+          "Xij_1": 0.6742,
+          "MRD_negativity": "MRD-"
+        },
+        {
+          "time": 5.4937,
+          "value": 0.6044,
+          "Xij_1": 0.6742,
+          "MRD_negativity": "MRD+"
+        },
+        {
+          "time": 5.5127,
+          "value": 1.5962,
+          "Xij_1": 0.6742,
+          "MRD_negativity": "MRD+"
+        },
+        {
+          "time": 6.6096,
+          "value": 1.5409,
+          "Xij_1": 0.9701,
+          "MRD_negativity": "MRD+"
+        },
+        {
+          "time": 6.9099,
+          "value": 0.8333,
+          "Xij_1": 1.3099,
+          "MRD_negativity": "MRD+"
+        },
+        {
+          "time": 7.6463,
+          "value": 3.9289,
+          "Xij_1": 2.7357,
+          "MRD_negativity": "MRD+"
+        }
+      ]
+    },
+    {
+      "id": "PR_004",
+      "covariates": {
+        "Z1": "0",
+        "Z2": -0.1151,
+        "eventtime_OS": 10,
+        "OS": "Censor",
+        "relapse_status": "Relapse",
+        "relapse_time": 6.17,
+        "group": "PR"
+      },
+      "data": [
+        {
+          "time": 0,
+          "value": 38.9213,
+          "Xij_1": 31.0656,
+          "MRD_negativity": "MRD+"
+        },
+        {
+          "time": 1.5743,
+          "value": 3.4239,
+          "Xij_1": 2.0349,
+          "MRD_negativity": "MRD+"
+        },
+        {
+          "time": 1.9865,
+          "value": 1.1512,
+          "Xij_1": 0.9968,
+          "MRD_negativity": "MRD+"
+        },
+        {
+          "time": 2,
+          "value": 0.9333,
+          "Xij_1": 0.9738,
+          "MRD_negativity": "MRD+"
+        },
+        {
+          "time": 2.7661,
+          "value": 1.4483,
+          "Xij_1": 0.9738,
+          "MRD_negativity": "MRD+"
+        },
+        {
+          "time": 2.7982,
+          "value": 1.0193,
+          "Xij_1": 0.9738,
+          "MRD_negativity": "MRD+"
+        },
+        {
+          "time": 2.881,
+          "value": 2.4219,
+          "Xij_1": 0.9738,
+          "MRD_negativity": "MRD+"
+        },
+        {
+          "time": 4.8168,
+          "value": 0.7743,
+          "Xij_1": 0.9738,
+          "MRD_negativity": "MRD+"
+        },
+        {
+          "time": 6.5599,
+          "value": 1.171,
+          "Xij_1": 1.4442,
+          "MRD_negativity": "MRD+"
+        },
+        {
+          "time": 6.9573,
+          "value": 2.7394,
+          "Xij_1": 2.1486,
+          "MRD_negativity": "MRD+"
+        },
+        {
+          "time": 7.76,
+          "value": 2.03,
+          "Xij_1": 4.7953,
+          "MRD_negativity": "MRD+"
+        },
+        {
+          "time": 7.9213,
+          "value": 3.1208,
+          "Xij_1": 5.6346,
+          "MRD_negativity": "MRD+"
+        },
+        {
+          "time": 9.1345,
+          "value": 24.456,
+          "Xij_1": 18.9553,
+          "MRD_negativity": "MRD+"
+        },
+        {
+          "time": 9.4955,
+          "value": 49.1905,
+          "Xij_1": 27.1956,
+          "MRD_negativity": "MRD+"
+        },
+        {
+          "time": 9.6329,
+          "value": 10.5282,
+          "Xij_1": 31.2007,
+          "MRD_negativity": "MRD+"
+        }
+      ]
+    },
+    {
+      "id": "PR_005",
+      "covariates": {
+        "Z1": "0",
+        "Z2": 0.4805,
+        "eventtime_OS": 10,
+        "OS": "Censor",
+        "relapse_status": "No Relapse",
+        "relapse_time": "NA",
+        "group": "PR"
+      },
+      "data": [
+        {
+          "time": 0,
+          "value": 24.1686,
+          "Xij_1": 18.594,
+          "MRD_negativity": "MRD+"
+        },
+        {
+          "time": 1.1747,
+          "value": 2.3105,
+          "Xij_1": 3.4404,
+          "MRD_negativity": "MRD+"
+        },
+        {
+          "time": 1.4152,
+          "value": 3.4451,
+          "Xij_1": 2.4356,
+          "MRD_negativity": "MRD+"
+        },
+        {
+          "time": 2,
+          "value": 0.5316,
+          "Xij_1": 1.0515,
+          "MRD_negativity": "MRD+"
+        },
+        {
+          "time": 2.8766,
+          "value": 0.8048,
+          "Xij_1": 1.0515,
+          "MRD_negativity": "MRD+"
+        },
+        {
+          "time": 3.0637,
+          "value": 2.6431,
+          "Xij_1": 1.0515,
+          "MRD_negativity": "MRD+"
+        },
+        {
+          "time": 3.4214,
+          "value": 1.2253,
+          "Xij_1": 1.0515,
+          "MRD_negativity": "MRD+"
+        },
+        {
+          "time": 3.4936,
+          "value": 2.5387,
+          "Xij_1": 1.0515,
+          "MRD_negativity": "MRD+"
+        },
+        {
+          "time": 4.2525,
+          "value": 1.3695,
+          "Xij_1": 1.0515,
+          "MRD_negativity": "MRD+"
+        },
+        {
+          "time": 4.5843,
+          "value": 0.8291,
+          "Xij_1": 1.0515,
+          "MRD_negativity": "MRD+"
+        },
+        {
+          "time": 6.7547,
+          "value": 1.1252,
+          "Xij_1": 1.0515,
+          "MRD_negativity": "MRD+"
+        },
+        {
+          "time": 7.4852,
+          "value": 1.0593,
+          "Xij_1": 1.0515,
+          "MRD_negativity": "MRD+"
+        },
+        {
+          "time": 8.1137,
+          "value": 1.2795,
+          "Xij_1": 1.0515,
+          "MRD_negativity": "MRD+"
+        },
+        {
+          "time": 9.2136,
+          "value": 0.7846,
+          "Xij_1": 1.0515,
+          "MRD_negativity": "MRD+"
+        },
+        {
+          "time": 9.5392,
+          "value": 0.9148,
+          "Xij_1": 1.0515,
+          "MRD_negativity": "MRD+"
+        }
+      ]
+    },
+    {
+      "id": "PR_006",
+      "covariates": {
+        "Z1": "0",
+        "Z2": -0.9927,
+        "eventtime_OS": 8.28,
+        "OS": "Event",
+        "relapse_status": "No Relapse",
+        "relapse_time": "NA",
+        "group": "PR"
+      },
+      "data": [
+        {
+          "time": 0,
+          "value": 36.5634,
+          "Xij_1": 21.336,
+          "MRD_negativity": "MRD+"
+        },
+        {
+          "time": 0.295,
+          "value": 9.7464,
+          "Xij_1": 14.5041,
+          "MRD_negativity": "MRD+"
+        },
+        {
+          "time": 0.4222,
+          "value": 5.9732,
+          "Xij_1": 12.2802,
+          "MRD_negativity": "MRD+"
+        },
+        {
+          "time": 2,
+          "value": 1.5428,
+          "Xij_1": 1.5588,
+          "MRD_negativity": "MRD+"
+        },
+        {
+          "time": 2.2413,
+          "value": 0.7181,
+          "Xij_1": 1.5588,
+          "MRD_negativity": "MRD+"
+        },
+        {
+          "time": 4.575,
+          "value": 4.4712,
+          "Xij_1": 1.5588,
+          "MRD_negativity": "MRD+"
+        },
+        {
+          "time": 4.603,
+          "value": 1.7279,
+          "Xij_1": 1.5588,
+          "MRD_negativity": "MRD+"
+        },
+        {
+          "time": 4.7502,
+          "value": 2.9825,
+          "Xij_1": 1.5588,
+          "MRD_negativity": "MRD+"
+        },
+        {
+          "time": 5.2571,
+          "value": 0.9887,
+          "Xij_1": 1.5588,
+          "MRD_negativity": "MRD+"
+        },
+        {
+          "time": 5.3829,
+          "value": 1.097,
+          "Xij_1": 1.5588,
+          "MRD_negativity": "MRD+"
+        },
+        {
+          "time": 6.0919,
+          "value": 1.3459,
+          "Xij_1": 1.5588,
+          "MRD_negativity": "MRD+"
+        },
+        {
+          "time": 6.3571,
+          "value": 2.1742,
+          "Xij_1": 1.5588,
+          "MRD_negativity": "MRD+"
+        },
+        {
+          "time": 6.9718,
+          "value": 1.9992,
+          "Xij_1": 1.5588,
+          "MRD_negativity": "MRD+"
+        }
+      ]
+    },
+    {
+      "id": "PR_007",
+      "covariates": {
+        "Z1": "1",
+        "Z2": -0.548,
+        "eventtime_OS": 10,
+        "OS": "Censor",
+        "relapse_status": "No Relapse",
+        "relapse_time": "NA",
+        "group": "PR"
+      },
+      "data": [
+        {
+          "time": 0,
+          "value": 22.7091,
+          "Xij_1": 24.6566,
+          "MRD_negativity": "MRD+"
+        },
+        {
+          "time": 0.3262,
+          "value": 10.2873,
+          "Xij_1": 14.3135,
+          "MRD_negativity": "MRD+"
+        },
+        {
+          "time": 1.0282,
+          "value": 3.8686,
+          "Xij_1": 4.4415,
+          "MRD_negativity": "MRD+"
+        },
+        {
+          "time": 1.7921,
+          "value": 1.2974,
+          "Xij_1": 1.2432,
+          "MRD_negativity": "MRD+"
+        },
+        {
+          "time": 2,
+          "value": 0.2262,
+          "Xij_1": 0.8791,
+          "MRD_negativity": "MRD-"
+        },
+        {
+          "time": 2.1356,
+          "value": 0.4032,
+          "Xij_1": 0.8791,
+          "MRD_negativity": "MRD-"
+        },
+        {
+          "time": 3.0161,
+          "value": 1.2793,
+          "Xij_1": 0.8791,
+          "MRD_negativity": "MRD+"
+        },
+        {
+          "time": 3.0342,
+          "value": 0.8865,
+          "Xij_1": 0.8791,
+          "MRD_negativity": "MRD+"
+        },
+        {
+          "time": 3.4677,
+          "value": 1.2092,
+          "Xij_1": 0.8791,
+          "MRD_negativity": "MRD+"
+        },
+        {
+          "time": 4.4959,
+          "value": 0.8427,
+          "Xij_1": 0.8791,
+          "MRD_negativity": "MRD+"
+        },
+        {
+          "time": 4.6958,
+          "value": 1.6621,
+          "Xij_1": 0.8791,
+          "MRD_negativity": "MRD+"
+        },
+        {
+          "time": 7.2118,
+          "value": 1.1793,
+          "Xij_1": 0.8791,
+          "MRD_negativity": "MRD+"
+        },
+        {
+          "time": 7.2545,
+          "value": 1.1343,
+          "Xij_1": 0.8791,
+          "MRD_negativity": "MRD+"
+        },
+        {
+          "time": 8.4314,
+          "value": 0.9621,
+          "Xij_1": 0.8791,
+          "MRD_negativity": "MRD+"
+        },
+        {
+          "time": 9.4628,
+          "value": 0.4629,
+          "Xij_1": 0.8791,
+          "MRD_negativity": "MRD-"
+        }
+      ]
+    },
+    {
+      "id": "PR_008",
+      "covariates": {
+        "Z1": "1",
+        "Z2": -0.209,
+        "eventtime_OS": 10,
+        "OS": "Censor",
+        "relapse_status": "Relapse",
+        "relapse_time": 5.89,
+        "group": "PR"
+      },
+      "data": [
+        {
+          "time": 0,
+          "value": 16.2123,
+          "Xij_1": 17.1604,
+          "MRD_negativity": "MRD+"
+        },
+        {
+          "time": 0.23,
+          "value": 10.9698,
+          "Xij_1": 12.4074,
+          "MRD_negativity": "MRD+"
+        },
+        {
+          "time": 0.6351,
+          "value": 10.3183,
+          "Xij_1": 7.0092,
+          "MRD_negativity": "MRD+"
+        },
+        {
+          "time": 0.645,
+          "value": 4.9355,
+          "Xij_1": 6.9121,
+          "MRD_negativity": "MRD+"
+        },
+        {
+          "time": 1.7461,
+          "value": 1.262,
+          "Xij_1": 1.4638,
+          "MRD_negativity": "MRD+"
+        },
+        {
+          "time": 2,
+          "value": 0.6856,
+          "Xij_1": 1.0233,
+          "MRD_negativity": "MRD+"
+        },
+        {
+          "time": 3.2231,
+          "value": 1.7856,
+          "Xij_1": 1.0233,
+          "MRD_negativity": "MRD+"
+        },
+        {
+          "time": 4.2408,
+          "value": 1.2048,
+          "Xij_1": 1.0233,
+          "MRD_negativity": "MRD+"
+        },
+        {
+          "time": 4.8369,
+          "value": 0.5149,
+          "Xij_1": 1.0233,
+          "MRD_negativity": "MRD+"
+        },
+        {
+          "time": 4.9281,
+          "value": 1.2519,
+          "Xij_1": 1.0233,
+          "MRD_negativity": "MRD+"
+        },
+        {
+          "time": 5.9566,
+          "value": 1.6353,
+          "Xij_1": 1.0948,
+          "MRD_negativity": "MRD+"
+        },
+        {
+          "time": 7.3369,
+          "value": 6.6705,
+          "Xij_1": 4.3532,
+          "MRD_negativity": "MRD+"
+        },
+        {
+          "time": 8.266,
+          "value": 23.2596,
+          "Xij_1": 11.0234,
+          "MRD_negativity": "MRD+"
+        },
+        {
+          "time": 8.5154,
+          "value": 24.9542,
+          "Xij_1": 14.1462,
+          "MRD_negativity": "MRD+"
+        },
+        {
+          "time": 9.3245,
+          "value": 39.4454,
+          "Xij_1": 31.7714,
+          "MRD_negativity": "MRD+"
+        }
+      ]
+    },
+    {
+      "id": "PR_009",
+      "covariates": {
+        "Z1": "0",
+        "Z2": 0.392,
+        "eventtime_OS": 8.22,
+        "OS": "Event",
+        "relapse_status": "Relapse",
+        "relapse_time": 6.01,
+        "group": "PR"
+      },
+      "data": [
+        {
+          "time": 0,
+          "value": 12.2258,
+          "Xij_1": 20.2986,
+          "MRD_negativity": "MRD+"
+        },
+        {
+          "time": 0.3323,
+          "value": 47.8461,
+          "Xij_1": 13.3342,
+          "MRD_negativity": "MRD+"
+        },
+        {
+          "time": 0.3828,
+          "value": 15.3237,
+          "Xij_1": 12.5095,
+          "MRD_negativity": "MRD+"
+        },
+        {
+          "time": 0.5006,
+          "value": 15.784,
+          "Xij_1": 10.778,
+          "MRD_negativity": "MRD+"
+        },
+        {
+          "time": 1.0292,
+          "value": 17.5797,
+          "Xij_1": 5.5237,
+          "MRD_negativity": "MRD+"
+        },
+        {
+          "time": 1.4549,
+          "value": 2.745,
+          "Xij_1": 3.2244,
+          "MRD_negativity": "MRD+"
+        },
+        {
+          "time": 2,
+          "value": 1.1969,
+          "Xij_1": 1.6183,
+          "MRD_negativity": "MRD+"
+        },
+        {
+          "time": 4.9217,
+          "value": 2.0939,
+          "Xij_1": 1.6183,
+          "MRD_negativity": "MRD+"
+        },
+        {
+          "time": 5.7836,
+          "value": 1.0981,
+          "Xij_1": 1.6183,
+          "MRD_negativity": "MRD+"
+        },
+        {
+          "time": 6.1283,
+          "value": 0.8824,
+          "Xij_1": 1.826,
+          "MRD_negativity": "MRD+"
+        },
+        {
+          "time": 6.1507,
+          "value": 1.5505,
+          "Xij_1": 1.8673,
+          "MRD_negativity": "MRD+"
+        },
+        {
+          "time": 6.3671,
+          "value": 2.0503,
+          "Xij_1": 2.3184,
+          "MRD_negativity": "MRD+"
+        },
+        {
+          "time": 8.013,
+          "value": 14.6749,
+          "Xij_1": 12.0222,
+          "MRD_negativity": "MRD+"
+        }
+      ]
+    },
+    {
+      "id": "PR_010",
+      "covariates": {
+        "Z1": "0",
+        "Z2": 1.6901,
+        "eventtime_OS": 4.77,
+        "OS": "Event",
+        "relapse_status": "No Relapse",
+        "relapse_time": "NA",
+        "group": "PR"
+      },
+      "data": [
+        {
+          "time": 0,
+          "value": 24.6537,
+          "Xij_1": 16.4531,
+          "MRD_negativity": "MRD+"
+        },
+        {
+          "time": 0.3575,
+          "value": 7.9569,
+          "Xij_1": 9.7131,
+          "MRD_negativity": "MRD+"
+        },
+        {
+          "time": 0.603,
+          "value": 7.6165,
+          "Xij_1": 6.7646,
+          "MRD_negativity": "MRD+"
+        },
+        {
+          "time": 1.2096,
+          "value": 4.8062,
+          "Xij_1": 2.766,
+          "MRD_negativity": "MRD+"
+        },
+        {
+          "time": 1.3051,
+          "value": 1.2833,
+          "Xij_1": 2.4027,
+          "MRD_negativity": "MRD+"
+        },
+        {
+          "time": 1.3462,
+          "value": 2.3888,
+          "Xij_1": 2.2616,
+          "MRD_negativity": "MRD+"
+        },
+        {
+          "time": 1.7589,
+          "value": 0.798,
+          "Xij_1": 1.231,
+          "MRD_negativity": "MRD+"
+        },
+        {
+          "time": 1.8256,
+          "value": 1.465,
+          "Xij_1": 1.1156,
+          "MRD_negativity": "MRD+"
+        },
+        {
+          "time": 2,
+          "value": 1.8594,
+          "Xij_1": 0.8627,
+          "MRD_negativity": "MRD+"
+        },
+        {
+          "time": 2.81,
+          "value": 0.7958,
+          "Xij_1": 0.8627,
+          "MRD_negativity": "MRD+"
+        },
+        {
+          "time": 3.6868,
+          "value": 0.4367,
+          "Xij_1": 0.8627,
+          "MRD_negativity": "MRD-"
+        },
+        {
+          "time": 4.1735,
+          "value": 0.4805,
+          "Xij_1": 0.8627,
+          "MRD_negativity": "MRD-"
+        }
+      ]
+    },
+    {
+      "id": "SD_001",
+      "covariates": {
+        "Z1": "1",
+        "Z2": -0.8347,
+        "eventtime_OS": 0.17,
+        "OS": "Event",
+        "relapse_status": "No Relapse",
+        "relapse_time": "NA",
+        "group": "SD"
+      },
+      "data": [
+        {
+          "time": 0,
+          "value": 19.4295,
+          "Xij_1": 19.1967,
+          "MRD_negativity": "MRD+"
+        }
+      ]
+    },
+    {
+      "id": "SD_002",
+      "covariates": {
+        "Z1": "1",
+        "Z2": 0.1395,
+        "eventtime_OS": 4.12,
+        "OS": "Event",
+        "relapse_status": "No Relapse",
+        "relapse_time": "NA",
+        "group": "SD"
+      },
+      "data": [
+        {
+          "time": 0,
+          "value": 18.7098,
+          "Xij_1": 21.0394,
+          "MRD_negativity": "MRD+"
+        },
+        {
+          "time": 1.0518,
+          "value": 15.6907,
+          "Xij_1": 10.3484,
+          "MRD_negativity": "MRD+"
+        },
+        {
+          "time": 1.6721,
+          "value": 14.644,
+          "Xij_1": 6.8097,
+          "MRD_negativity": "MRD+"
+        },
+        {
+          "time": 1.6774,
+          "value": 9.441,
+          "Xij_1": 6.7853,
+          "MRD_negativity": "MRD+"
+        },
+        {
+          "time": 1.6926,
+          "value": 5.9936,
+          "Xij_1": 6.7162,
+          "MRD_negativity": "MRD+"
+        },
+        {
+          "time": 1.8784,
+          "value": 2.9018,
+          "Xij_1": 5.9251,
+          "MRD_negativity": "MRD+"
+        },
+        {
+          "time": 2,
+          "value": 3.2809,
+          "Xij_1": 5.4584,
+          "MRD_negativity": "MRD+"
+        },
+        {
+          "time": 2.3551,
+          "value": 8.0945,
+          "Xij_1": 5.4584,
+          "MRD_negativity": "MRD+"
+        }
+      ]
+    },
+    {
+      "id": "SD_003",
+      "covariates": {
+        "Z1": "1",
+        "Z2": 0.2974,
+        "eventtime_OS": 6.39,
+        "OS": "Event",
+        "relapse_status": "No Relapse",
+        "relapse_time": "NA",
+        "group": "SD"
+      },
+      "data": [
+        {
+          "time": 0,
+          "value": 14.6783,
+          "Xij_1": 15.3413,
+          "MRD_negativity": "MRD+"
+        },
+        {
+          "time": 1.7483,
+          "value": 4.5509,
+          "Xij_1": 7.052,
+          "MRD_negativity": "MRD+"
+        },
+        {
+          "time": 2,
+          "value": 11.9699,
+          "Xij_1": 6.3053,
+          "MRD_negativity": "MRD+"
+        },
+        {
+          "time": 3.2065,
+          "value": 11.4682,
+          "Xij_1": 6.3053,
+          "MRD_negativity": "MRD+"
+        },
+        {
+          "time": 4.5346,
+          "value": 8.511,
+          "Xij_1": 6.3053,
+          "MRD_negativity": "MRD+"
+        },
+        {
+          "time": 5.274,
+          "value": 11.9688,
+          "Xij_1": 6.3053,
+          "MRD_negativity": "MRD+"
+        },
+        {
+          "time": 5.3229,
+          "value": 4.9138,
+          "Xij_1": 6.3053,
+          "MRD_negativity": "MRD+"
+        },
+        {
+          "time": 6.0085,
+          "value": 11.8328,
+          "Xij_1": 6.3053,
+          "MRD_negativity": "MRD+"
+        },
+        {
+          "time": 6.1866,
+          "value": 3.1728,
+          "Xij_1": 6.3053,
+          "MRD_negativity": "MRD+"
+        }
+      ]
+    },
+    {
+      "id": "SD_004",
+      "covariates": {
+        "Z1": "0",
+        "Z2": -0.6593,
+        "eventtime_OS": 1.22,
+        "OS": "Event",
+        "relapse_status": "No Relapse",
+        "relapse_time": "NA",
+        "group": "SD"
+      },
+      "data": [
+        {
+          "time": 0,
+          "value": 11.7397,
+          "Xij_1": 16.6461,
+          "MRD_negativity": "MRD+"
+        },
+        {
+          "time": 0.932,
+          "value": 13.3337,
+          "Xij_1": 12.3799,
+          "MRD_negativity": "MRD+"
+        }
+      ]
+    },
+    {
+      "id": "SD_005",
+      "covariates": {
+        "Z1": "0",
+        "Z2": 1.1905,
+        "eventtime_OS": 6.75,
+        "OS": "Event",
+        "relapse_status": "No Relapse",
+        "relapse_time": "NA",
+        "group": "SD"
+      },
+      "data": [
+        {
+          "time": 0,
+          "value": 27.6588,
+          "Xij_1": 19.492,
+          "MRD_negativity": "MRD+"
+        },
+        {
+          "time": 1.3096,
+          "value": 5.8569,
+          "Xij_1": 9.5727,
+          "MRD_negativity": "MRD+"
+        },
+        {
+          "time": 1.8561,
+          "value": 10.3356,
+          "Xij_1": 7.1147,
+          "MRD_negativity": "MRD+"
+        },
+        {
+          "time": 2,
+          "value": 4.2113,
+          "Xij_1": 6.5799,
+          "MRD_negativity": "MRD+"
+        },
+        {
+          "time": 2.7287,
+          "value": 6.4087,
+          "Xij_1": 6.5799,
+          "MRD_negativity": "MRD+"
+        },
+        {
+          "time": 3.4232,
+          "value": 5.5758,
+          "Xij_1": 6.5799,
+          "MRD_negativity": "MRD+"
+        },
+        {
+          "time": 3.6795,
+          "value": 16.9767,
+          "Xij_1": 6.5799,
+          "MRD_negativity": "MRD+"
+        },
+        {
+          "time": 4.1897,
+          "value": 9.3599,
+          "Xij_1": 6.5799,
+          "MRD_negativity": "MRD+"
+        },
+        {
+          "time": 4.4091,
+          "value": 10.0965,
+          "Xij_1": 6.5799,
+          "MRD_negativity": "MRD+"
+        }
+      ]
+    },
+    {
+      "id": "SD_006",
+      "covariates": {
+        "Z1": "0",
+        "Z2": 0.5647,
+        "eventtime_OS": 6.48,
+        "OS": "Event",
+        "relapse_status": "No Relapse",
+        "relapse_time": "NA",
+        "group": "SD"
+      },
+      "data": [
+        {
+          "time": 0,
+          "value": 12.3528,
+          "Xij_1": 13.0353,
+          "MRD_negativity": "MRD+"
+        },
+        {
+          "time": 0.3795,
+          "value": 23.7418,
+          "Xij_1": 12.1035,
+          "MRD_negativity": "MRD+"
+        },
+        {
+          "time": 1.0101,
+          "value": 12.3691,
+          "Xij_1": 10.7005,
+          "MRD_negativity": "MRD+"
+        },
+        {
+          "time": 1.2773,
+          "value": 30.6477,
+          "Xij_1": 10.156,
+          "MRD_negativity": "MRD+"
+        },
+        {
+          "time": 2,
+          "value": 13.8002,
+          "Xij_1": 8.8185,
+          "MRD_negativity": "MRD+"
+        },
+        {
+          "time": 2.0429,
+          "value": 3.956,
+          "Xij_1": 8.8185,
+          "MRD_negativity": "MRD+"
+        },
+        {
+          "time": 3.0522,
+          "value": 3.7483,
+          "Xij_1": 8.8185,
+          "MRD_negativity": "MRD+"
+        },
+        {
+          "time": 4.564,
+          "value": 7.3722,
+          "Xij_1": 8.8185,
+          "MRD_negativity": "MRD+"
+        },
+        {
+          "time": 5.5819,
+          "value": 3.8384,
+          "Xij_1": 8.8185,
+          "MRD_negativity": "MRD+"
+        },
+        {
+          "time": 5.7041,
+          "value": 8.0171,
+          "Xij_1": 8.8185,
+          "MRD_negativity": "MRD+"
+        },
+        {
+          "time": 5.7681,
+          "value": 7.0583,
+          "Xij_1": 8.8185,
+          "MRD_negativity": "MRD+"
+        },
+        {
+          "time": 6.011,
+          "value": 14.0757,
+          "Xij_1": 8.8185,
+          "MRD_negativity": "MRD+"
+        },
+        {
+          "time": 6.1217,
+          "value": 7.0436,
+          "Xij_1": 8.8185,
+          "MRD_negativity": "MRD+"
+        }
+      ]
+    },
+    {
+      "id": "SD_007",
+      "covariates": {
+        "Z1": "1",
+        "Z2": -0.0182,
+        "eventtime_OS": 10,
+        "OS": "Censor",
+        "relapse_status": "Relapse",
+        "relapse_time": 5.91,
+        "group": "SD"
+      },
+      "data": [
+        {
+          "time": 0,
+          "value": 26.5041,
+          "Xij_1": 21.8584,
+          "MRD_negativity": "MRD+"
+        },
+        {
+          "time": 0.2283,
+          "value": 23.2015,
+          "Xij_1": 19.0133,
+          "MRD_negativity": "MRD+"
+        },
+        {
+          "time": 0.6863,
+          "value": 12.8586,
+          "Xij_1": 14.3745,
+          "MRD_negativity": "MRD+"
+        },
+        {
+          "time": 1.5084,
+          "value": 9.9674,
+          "Xij_1": 8.7009,
+          "MRD_negativity": "MRD+"
+        },
+        {
+          "time": 2,
+          "value": 3.9829,
+          "Xij_1": 6.4442,
+          "MRD_negativity": "MRD+"
+        },
+        {
+          "time": 2.9524,
+          "value": 3.5259,
+          "Xij_1": 6.4442,
+          "MRD_negativity": "MRD+"
+        },
+        {
+          "time": 3.3906,
+          "value": 11.2883,
+          "Xij_1": 6.4442,
+          "MRD_negativity": "MRD+"
+        },
+        {
+          "time": 4.3064,
+          "value": 9.0339,
+          "Xij_1": 6.4442,
+          "MRD_negativity": "MRD+"
+        },
+        {
+          "time": 4.478,
+          "value": 5.5051,
+          "Xij_1": 6.4442,
+          "MRD_negativity": "MRD+"
+        },
+        {
+          "time": 4.8822,
+          "value": 20.9207,
+          "Xij_1": 6.4442,
+          "MRD_negativity": "MRD+"
+        },
+        {
+          "time": 5.8477,
+          "value": 10.7882,
+          "Xij_1": 6.4442,
+          "MRD_negativity": "MRD+"
+        },
+        {
+          "time": 6.1442,
+          "value": 6.6657,
+          "Xij_1": 8.1447,
+          "MRD_negativity": "MRD+"
+        },
+        {
+          "time": 7.2613,
+          "value": 40.7833,
+          "Xij_1": 24.891,
+          "MRD_negativity": "MRD+"
+        },
+        {
+          "time": 8.3682,
+          "value": 47.4504,
+          "Xij_1": 75.2932,
+          "MRD_negativity": "MRD+"
+        },
+        {
+          "time": 8.8361,
+          "value": 144.4177,
+          "Xij_1": 120.2225,
+          "MRD_negativity": "MRD+"
+        }
+      ]
+    },
+    {
+      "id": "SD_008",
+      "covariates": {
+        "Z1": "0",
+        "Z2": -1.138,
+        "eventtime_OS": 2.7,
+        "OS": "Event",
+        "relapse_status": "No Relapse",
+        "relapse_time": "NA",
+        "group": "SD"
+      },
+      "data": [
+        {
+          "time": 0,
+          "value": 9.076,
+          "Xij_1": 16.4376,
+          "MRD_negativity": "MRD+"
+        },
+        {
+          "time": 2,
+          "value": 6.852,
+          "Xij_1": 7.6575,
+          "MRD_negativity": "MRD+"
+        }
+      ]
+    },
+    {
+      "id": "SD_009",
+      "covariates": {
+        "Z1": "0",
+        "Z2": 1.1473,
+        "eventtime_OS": 8.24,
+        "OS": "Event",
+        "relapse_status": "No Relapse",
+        "relapse_time": "NA",
+        "group": "SD"
+      },
+      "data": [
+        {
+          "time": 0,
+          "value": 20.0139,
+          "Xij_1": 19.8742,
+          "MRD_negativity": "MRD+"
+        },
+        {
+          "time": 1.2036,
+          "value": 10.088,
+          "Xij_1": 11.199,
+          "MRD_negativity": "MRD+"
+        },
+        {
+          "time": 2,
+          "value": 5.106,
+          "Xij_1": 7.6621,
+          "MRD_negativity": "MRD+"
+        },
+        {
+          "time": 3.0178,
+          "value": 14.1175,
+          "Xij_1": 7.6621,
+          "MRD_negativity": "MRD+"
+        },
+        {
+          "time": 3.7521,
+          "value": 4.6913,
+          "Xij_1": 7.6621,
+          "MRD_negativity": "MRD+"
+        },
+        {
+          "time": 3.7864,
+          "value": 7.9343,
+          "Xij_1": 7.6621,
+          "MRD_negativity": "MRD+"
+        },
+        {
+          "time": 3.8505,
+          "value": 9.4658,
+          "Xij_1": 7.6621,
+          "MRD_negativity": "MRD+"
+        },
+        {
+          "time": 4.1976,
+          "value": 3.9639,
+          "Xij_1": 7.6621,
+          "MRD_negativity": "MRD+"
+        },
+        {
+          "time": 5.8701,
+          "value": 7.7215,
+          "Xij_1": 7.6621,
+          "MRD_negativity": "MRD+"
+        },
+        {
+          "time": 6.4302,
+          "value": 15.2546,
+          "Xij_1": 7.6621,
+          "MRD_negativity": "MRD+"
+        },
+        {
+          "time": 7.349,
+          "value": 4.9884,
+          "Xij_1": 7.6621,
+          "MRD_negativity": "MRD+"
+        },
+        {
+          "time": 7.7999,
+          "value": 8.7011,
+          "Xij_1": 7.6621,
+          "MRD_negativity": "MRD+"
+        },
+        {
+          "time": 8.0701,
+          "value": 5.6462,
+          "Xij_1": 7.6621,
+          "MRD_negativity": "MRD+"
+        }
+      ]
+    },
+    {
+      "id": "SD_010",
+      "covariates": {
+        "Z1": "1",
+        "Z2": -0.2179,
+        "eventtime_OS": 10,
+        "OS": "Censor",
+        "relapse_status": "No Relapse",
+        "relapse_time": "NA",
+        "group": "SD"
+      },
+      "data": [
+        {
+          "time": 0,
+          "value": 16.8321,
+          "Xij_1": 13.9108,
+          "MRD_negativity": "MRD+"
+        },
+        {
+          "time": 0.2949,
+          "value": 10.8417,
+          "Xij_1": 12.4519,
+          "MRD_negativity": "MRD+"
+        },
+        {
+          "time": 0.9577,
+          "value": 12.8581,
+          "Xij_1": 9.707,
+          "MRD_negativity": "MRD+"
+        },
+        {
+          "time": 2,
+          "value": 11.6995,
+          "Xij_1": 6.562,
+          "MRD_negativity": "MRD+"
+        },
+        {
+          "time": 2.2734,
+          "value": 10.363,
+          "Xij_1": 6.562,
+          "MRD_negativity": "MRD+"
+        },
+        {
+          "time": 2.8643,
+          "value": 4.8064,
+          "Xij_1": 6.562,
+          "MRD_negativity": "MRD+"
+        },
+        {
+          "time": 3.2542,
+          "value": 11.0092,
+          "Xij_1": 6.562,
+          "MRD_negativity": "MRD+"
+        },
+        {
+          "time": 3.9193,
+          "value": 7.3269,
+          "Xij_1": 6.562,
+          "MRD_negativity": "MRD+"
+        },
+        {
+          "time": 3.9711,
+          "value": 6.2138,
+          "Xij_1": 6.562,
+          "MRD_negativity": "MRD+"
+        },
+        {
+          "time": 4.1604,
+          "value": 5.6881,
+          "Xij_1": 6.562,
+          "MRD_negativity": "MRD+"
+        },
+        {
+          "time": 5.3734,
+          "value": 4.3038,
+          "Xij_1": 6.562,
+          "MRD_negativity": "MRD+"
+        },
+        {
+          "time": 6.4459,
+          "value": 8.7219,
+          "Xij_1": 6.562,
+          "MRD_negativity": "MRD+"
+        },
+        {
+          "time": 8.3842,
+          "value": 17.4071,
+          "Xij_1": 6.562,
+          "MRD_negativity": "MRD+"
+        },
+        {
+          "time": 8.5794,
+          "value": 4.194,
+          "Xij_1": 6.562,
+          "MRD_negativity": "MRD+"
+        },
+        {
+          "time": 9.2112,
+          "value": 5.5965,
+          "Xij_1": 6.562,
+          "MRD_negativity": "MRD+"
+        }
+      ]
+    }
+  ]
+}

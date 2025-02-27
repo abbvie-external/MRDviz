@@ -1,0 +1,44 @@
+Package: MRDviz
+Title: Visualization and Simulation of Minimal Residual Disease (MRD) Data
+Version: 0.3.1
+Authors@R: 
+    person("Kwangbom", "Choi", , "kbchoi@abbvie.com", role = c("aut", "cre"))
+Description: A Shiny application for visualizing and simulating Minimal Residual Disease (MRD) 
+    data in clinical trials. Provides interactive visualization of longitudinal MRD measurements,
+    survival analysis, and simulation capabilities for MRD trajectories.
+License: MIT + file LICENSE
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.2
+Imports:
+    shiny,
+    shinyjs,
+    highcharter,
+    data.table,
+    memoise,
+    survival,
+    jsonlite,
+    DT,
+    RColorBrewer,
+    shinydashboard,
+    ggplot2,
+    dplyr,
+    tidyr,
+    purrr,
+    simsurv,
+    stats,
+    utils,
+    openxlsx
+Suggests:
+    testthat (>= 3.0.0)
+Config/testthat/edition: 3
+Collate:
+    'utils.R'
+    'simulation.R'
+    'server_viz.R'
+    'server_simulation.R'
+    'server_mrdviz.R'
+    'MRDviz-package.R'
+    'app.R'
+    'run_mrdviz.R'
+    'export_json.R'

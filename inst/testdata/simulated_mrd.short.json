@@ -1,0 +1,465 @@
+{
+  "title": "Longitudinal Data Visualization",
+  "xlab": "Time",
+  "ylab": "Measurement",
+  "covariates": {
+    "OS": {
+      "Censor": [],
+      "Event": []
+    },
+    "PFS": {
+      "Censor": [],
+      "Event": []
+    },
+    "sex": {
+      "M": [],
+      "F": []
+    }
+  },
+  "time_variant_covariates": {
+    "MRD_negativity": {
+      "MRD+": [],
+      "MRD-": []
+    },
+    "Response": {
+      "CR": [],
+      "PR": [],
+      "SD": [],
+      "PD": []
+    }
+  },
+  "subjects": [
+    {
+      "id": "1",
+      "covariates": {
+        "eventtime_OS": 0.4661,
+        "OS": "Event",
+        "eventtime_PFS": 3.5633,
+        "PFS": "Censor",
+        "sex": "M"
+      },
+      "data": [
+        {
+          "time": 0,
+          "value": -0.2908,
+          "MRD_negativity": "MRD+",
+          "Response": "PD"
+        },
+        {
+          "time": 0.1946,
+          "value": -0.4166,
+          "MRD_negativity": "MRD+",
+          "Response": "PD"
+        },
+        {
+          "time": 0.7697,
+          "value": -0.483,
+          "MRD_negativity": "MRD+",
+          "Response": "PD"
+        },
+        {
+          "time": 1.5646,
+          "value": -0.3199,
+          "MRD_negativity": "MRD+",
+          "Response": "PD"
+        },
+        {
+          "time": 2.2711,
+          "value": 0.243,
+          "MRD_negativity": "MRD+",
+          "Response": "PD"
+        },
+        {
+          "time": 3.4087,
+          "value": 0.81,
+          "MRD_negativity": "MRD+",
+          "Response": "PD"
+        },
+        {
+          "time": 3.5918,
+          "value": 0.7638,
+          "MRD_negativity": "MRD+",
+          "Response": "PD"
+        },
+        {
+          "time": 5.1373,
+          "value": 1.2087,
+          "MRD_negativity": "MRD+",
+          "Response": "PD"
+        },
+        {
+          "time": 5.4769,
+          "value": 1.298,
+          "MRD_negativity": "MRD+",
+          "Response": "PD"
+        },
+        {
+          "time": 5.8566,
+          "value": 1.3399,
+          "MRD_negativity": "MRD+",
+          "Response": "PD"
+        }
+      ]
+    },
+    {
+      "id": "10",
+      "covariates": {
+        "eventtime_OS": 6,
+        "OS": "Censor",
+        "eventtime_PFS": 1.5156,
+        "PFS": "Censor",
+        "sex": "F"
+      },
+      "data": [
+        {
+          "time": 0,
+          "value": 0.856,
+          "MRD_negativity": "MRD+",
+          "Response": "PD"
+        },
+        {
+          "time": 0.4505,
+          "value": -2.1274,
+          "MRD_negativity": "MRD+",
+          "Response": "SD"
+        },
+        {
+          "time": 1.1157,
+          "value": -3.6867,
+          "MRD_negativity": "MRD+",
+          "Response": "PR"
+        },
+        {
+          "time": 1.4294,
+          "value": -3.8991,
+          "MRD_negativity": "MRD+",
+          "Response": "PR"
+        },
+        {
+          "time": 1.8204,
+          "value": -4.2738,
+          "MRD_negativity": "MRD+",
+          "Response": "PR"
+        },
+        {
+          "time": 2.0512,
+          "value": -4.1587,
+          "MRD_negativity": "MRD+",
+          "Response": "PR"
+        },
+        {
+          "time": 2.1047,
+          "value": -4.1922,
+          "MRD_negativity": "MRD+",
+          "Response": "PR"
+        },
+        {
+          "time": 2.3236,
+          "value": -4.2418,
+          "MRD_negativity": "MRD+",
+          "Response": "PR"
+        },
+        {
+          "time": 3.38,
+          "value": -4.1715,
+          "MRD_negativity": "MRD+",
+          "Response": "PR"
+        },
+        {
+          "time": 3.8072,
+          "value": -4.2285,
+          "MRD_negativity": "MRD+",
+          "Response": "PR"
+        }
+      ]
+    },
+    {
+      "id": "100",
+      "covariates": {
+        "eventtime_OS": 0.0104,
+        "OS": "Event",
+        "eventtime_PFS": 3.3601,
+        "PFS": "Censor",
+        "sex": "M"
+      },
+      "data": [
+        {
+          "time": 0,
+          "value": -0.4278,
+          "MRD_negativity": "MRD+",
+          "Response": "PD"
+        },
+        {
+          "time": 0.2889,
+          "value": -0.5538,
+          "MRD_negativity": "MRD+",
+          "Response": "PD"
+        },
+        {
+          "time": 1.4501,
+          "value": -0.4458,
+          "MRD_negativity": "MRD+",
+          "Response": "PD"
+        },
+        {
+          "time": 1.5561,
+          "value": -0.4021,
+          "MRD_negativity": "MRD+",
+          "Response": "PD"
+        },
+        {
+          "time": 1.9406,
+          "value": -0.5794,
+          "MRD_negativity": "MRD+",
+          "Response": "PD"
+        },
+        {
+          "time": 2.2854,
+          "value": -0.7222,
+          "MRD_negativity": "MRD+",
+          "Response": "PD"
+        },
+        {
+          "time": 3.801,
+          "value": -0.638,
+          "MRD_negativity": "MRD+",
+          "Response": "PD"
+        },
+        {
+          "time": 4.5613,
+          "value": -0.5411,
+          "MRD_negativity": "MRD+",
+          "Response": "PD"
+        },
+        {
+          "time": 4.7728,
+          "value": -0.5124,
+          "MRD_negativity": "MRD+",
+          "Response": "PD"
+        },
+        {
+          "time": 4.8039,
+          "value": -0.4385,
+          "MRD_negativity": "MRD+",
+          "Response": "PD"
+        }
+      ]
+    },
+    {
+      "id": "101",
+      "covariates": {
+        "eventtime_OS": 6,
+        "OS": "Censor",
+        "eventtime_PFS": 3.7591,
+        "PFS": "Event",
+        "sex": "F"
+      },
+      "data": [
+        {
+          "time": 0,
+          "value": -1.0751,
+          "MRD_negativity": "MRD+",
+          "Response": "SD"
+        },
+        {
+          "time": 0.6748,
+          "value": -1.2491,
+          "MRD_negativity": "MRD+",
+          "Response": "SD"
+        },
+        {
+          "time": 0.6922,
+          "value": -1.1431,
+          "MRD_negativity": "MRD+",
+          "Response": "SD"
+        },
+        {
+          "time": 0.7759,
+          "value": -1.1251,
+          "MRD_negativity": "MRD+",
+          "Response": "SD"
+        },
+        {
+          "time": 1.0473,
+          "value": -1.1297,
+          "MRD_negativity": "MRD+",
+          "Response": "SD"
+        },
+        {
+          "time": 1.2261,
+          "value": -1.0934,
+          "MRD_negativity": "MRD+",
+          "Response": "SD"
+        },
+        {
+          "time": 2.8178,
+          "value": -1.0862,
+          "MRD_negativity": "MRD+",
+          "Response": "SD"
+        },
+        {
+          "time": 2.9991,
+          "value": -1.1643,
+          "MRD_negativity": "MRD+",
+          "Response": "SD"
+        },
+        {
+          "time": 3.1161,
+          "value": -1.1534,
+          "MRD_negativity": "MRD+",
+          "Response": "SD"
+        },
+        {
+          "time": 5.5855,
+          "value": -1.1137,
+          "MRD_negativity": "MRD+",
+          "Response": "SD"
+        }
+      ]
+    },
+    {
+      "id": "102",
+      "covariates": {
+        "eventtime_OS": 0.6505,
+        "OS": "Event",
+        "eventtime_PFS": 2.7348,
+        "PFS": "Event",
+        "sex": "F"
+      },
+      "data": [
+        {
+          "time": 0,
+          "value": -0.0259,
+          "MRD_negativity": "MRD+",
+          "Response": "PD"
+        },
+        {
+          "time": 0.1375,
+          "value": -0.0406,
+          "MRD_negativity": "MRD+",
+          "Response": "PD"
+        },
+        {
+          "time": 0.4175,
+          "value": 0.0243,
+          "MRD_negativity": "MRD+",
+          "Response": "PD"
+        },
+        {
+          "time": 0.5006,
+          "value": 0.0786,
+          "MRD_negativity": "MRD+",
+          "Response": "PD"
+        },
+        {
+          "time": 1.0774,
+          "value": 0.015,
+          "MRD_negativity": "MRD+",
+          "Response": "PD"
+        },
+        {
+          "time": 2.3259,
+          "value": 0.0193,
+          "MRD_negativity": "MRD+",
+          "Response": "PD"
+        },
+        {
+          "time": 3.9861,
+          "value": -0.0318,
+          "MRD_negativity": "MRD+",
+          "Response": "PD"
+        },
+        {
+          "time": 4.7456,
+          "value": 0.1284,
+          "MRD_negativity": "MRD+",
+          "Response": "PD"
+        },
+        {
+          "time": 5.6008,
+          "value": 0.0787,
+          "MRD_negativity": "MRD+",
+          "Response": "PD"
+        },
+        {
+          "time": 5.8838,
+          "value": 0.1328,
+          "MRD_negativity": "MRD+",
+          "Response": "PD"
+        }
+      ]
+    },
+    {
+      "id": "103",
+      "covariates": {
+        "eventtime_OS": 6,
+        "OS": "Censor",
+        "eventtime_PFS": 2.4631,
+        "PFS": "Event",
+        "sex": "F"
+      },
+      "data": [
+        {
+          "time": 0,
+          "value": -0.6565,
+          "MRD_negativity": "MRD+",
+          "Response": "PD"
+        },
+        {
+          "time": 3.6685,
+          "value": -0.7723,
+          "MRD_negativity": "MRD+",
+          "Response": "PD"
+        },
+        {
+          "time": 4.0556,
+          "value": -0.7962,
+          "MRD_negativity": "MRD+",
+          "Response": "PD"
+        },
+        {
+          "time": 4.0663,
+          "value": -0.759,
+          "MRD_negativity": "MRD+",
+          "Response": "PD"
+        },
+        {
+          "time": 4.5319,
+          "value": -0.6573,
+          "MRD_negativity": "MRD+",
+          "Response": "PD"
+        },
+        {
+          "time": 4.6638,
+          "value": -0.5711,
+          "MRD_negativity": "MRD+",
+          "Response": "PD"
+        },
+        {
+          "time": 4.8447,
+          "value": -0.4151,
+          "MRD_negativity": "MRD+",
+          "Response": "PD"
+        },
+        {
+          "time": 4.9727,
+          "value": -0.7333,
+          "MRD_negativity": "MRD+",
+          "Response": "PD"
+        },
+        {
+          "time": 4.9946,
+          "value": -0.5663,
+          "MRD_negativity": "MRD+",
+          "Response": "PD"
+        },
+        {
+          "time": 5.0996,
+          "value": -0.8757,
+          "MRD_negativity": "MRD+",
+          "Response": "PD"
+        }
+      ]
+    }
+  ]
+}
