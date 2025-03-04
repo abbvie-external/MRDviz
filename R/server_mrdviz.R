@@ -77,13 +77,13 @@ observeEvent(input$datafile, {
     subjects_data <- lapply(datafile$subjects, function(subject) {
       c(list(id = subject$id), subject$covariates)
     })
-    shared_storage$subject_dt <- setDT(rbindlist(subjects_data, fill = TRUE))
+    shared_storage$subject_dt <- setDT(data.table::rbindlist(subjects_data, fill = TRUE))
     
     longitudinal_data <- lapply(datafile$subjects, function(subject) {
       if (is.data.frame(subject$data)) {
         data <- as.data.table(subject$data)
       } else if (is.list(subject$data) && length(subject$data) > 0) {
-        data <- rbindlist(lapply(subject$data, as.list), fill = TRUE)
+        data <- data.table::rbindlist(lapply(subject$data, as.list), fill = TRUE)
       } else {
         data <- data.table()
       }
@@ -93,7 +93,7 @@ observeEvent(input$datafile, {
       return(data)
     })
     
-    longitudinal_dt_unsorted <- rbindlist(longitudinal_data, fill = TRUE)
+    longitudinal_dt_unsorted <- data.table::rbindlist(longitudinal_data, fill = TRUE)
     longitudinal_dt_unsorted[, time := as.numeric(time)]
     shared_storage$longitudinal_dt <- longitudinal_dt_unsorted[order(id, time)]
     
