@@ -1,5 +1,5 @@
 {
-  "title": "Longitudinal Data Visualization",
+  "title": "MRD Trajectories",
   "xlab": "Time",
   "ylab": "Measurement",
   "covariates": {

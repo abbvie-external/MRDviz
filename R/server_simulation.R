@@ -10,6 +10,31 @@ simulation_server <- function(input, output, session, shared_storage) {
   # Reactive values for simulation
   groupParams <- reactiveVal(data.frame())
   simulations <- reactiveValues(long = list(), event = list())
+  
+  # Function to generate consistent colors for groups and maintain order
+  group_colors <- reactive({
+    # Get groups in the order they were added
+    groups <- if (length(simulations$long) > 0) {
+      group_names <- names(simulations$long)
+      if (is.null(group_names) || all(group_names == "")) {
+        # If names not available, fall back to unique groups from data
+        unique(do.call(rbind, simulations$long)$group)
+      } else {
+        # Use names if available (preserves order of addition)
+        group_names
+      }
+    } else {
+      character(0)
+    }
+    
+    # Create a named vector of colors for each group
+    colors <- setNames(
+      scales::hue_pal()(length(groups)),
+      groups
+    )
+    
+    colors
+  })
 
 # Reactive simulation using simjm
 simData <- reactive({
@@ -108,8 +133,14 @@ observeEvent(input$addSim, {
   currentLong$group <- input$groupName
   currentEvent$group <- input$groupName
   
-  simulations$long[[length(simulations$long) + 1]] <- currentLong
-  simulations$event[[length(simulations$event) + 1]] <- currentEvent
+  # Name the list element to preserve group order
+  next_index <- length(simulations$long) + 1
+  simulations$long[[next_index]] <- currentLong
+  simulations$event[[next_index]] <- currentEvent
+  
+  # Store the group name as the list element name for ordering
+  names(simulations$long)[next_index] <- input$groupName
+  names(simulations$event)[next_index] <- input$groupName
   
   new_row <- data.frame(
     group = input$groupName,
@@ -178,7 +209,20 @@ output$trajPlot <- renderPlot({
   
   p <- ggplot(data_to_plot, aes(x = time, y = .data[[y_col]]))
   if ("group" %in% names(data_to_plot)) {
+    # Get group order based on the order they were added
+    ordered_groups <- names(simulations$long)
+    
+    # Convert group to factor with levels in order of addition
+    if (length(ordered_groups) > 0) {
+      data_to_plot$group <- factor(data_to_plot$group, levels = ordered_groups)
+    }
+    
     p <- p + aes(color = group, group = interaction(subject_id, group))
+    
+    # Apply consistent color scale if there are multiple groups
+    if (length(unique(data_to_plot$group)) > 1) {
+      p <- p + scale_color_manual(values = group_colors())
+    }
   } else {
     p <- p + aes(group = subject_id)
   }
@@ -189,11 +233,10 @@ output$trajPlot <- renderPlot({
   p + geom_line(data = non_missing_data, alpha = 0.3) +
     geom_point(data = non_missing_data, alpha = 0.3) +
     geom_vline(xintercept = input$betaLong_mrd_eot, linetype = "dashed", color = "red") +
-    labs(x = "Time", y = y_label,
-         title = "Individual MRD Trajectories",
-         subtitle = paste("EoT time =", input$betaLong_mrd_eot)) +
+    labs(x = "Time", y = y_label, color = NULL) +
     theme_bw() +
-    scale_y_continuous(trans = "log10")
+    scale_y_continuous(trans = "log10") +
+    {if(input$show_all_groups) theme(legend.position = "top") else NULL}
 })
 
 # Trajectory Summary
@@ -249,77 +292,101 @@ output$eventPlot <- renderPlot({
     # Ensure consistent column naming for both single and all-groups scenarios
     event_data <- event_data %>%
       rename(eventtime_OS = eventtime, OS = status)
-    event_data$group <- as.factor(event_data$group)
-    surv_obj <- survival::survfit(survival::Surv(eventtime_OS, OS) ~ group, data = event_data)
+      
+    # Get group order based on the order they were added
+    ordered_groups <- names(simulations$long)
     
-    group_levels <- levels(event_data$group)
-    plot(surv_obj,
-         xlab = "Time",
-         ylab = "Survival Probability",
-         main = "Kaplan-Meier Plot (By Group)",
-         conf.int = input$show_ci,
-         lwd = 2,
-         mark.time = TRUE,
-         col = 1:length(group_levels))
-    
-    if (input$show_ci) {
-      for(i in 1:length(group_levels)) {
-        lines(surv_obj$time[surv_obj$strata == i],
-              surv_obj$upper[surv_obj$strata == i],
-              col = adjustcolor(i, alpha.f = 0.2),
-              lty = 2)
-        lines(surv_obj$time[surv_obj$strata == i],
-              surv_obj$lower[surv_obj$strata == i],
-              col = adjustcolor(i, alpha.f = 0.2),
-              lty = 2)
-      }
+    # Create a factor with levels in the order of addition
+    if (length(ordered_groups) > 0) {
+      event_data$group <- factor(event_data$group, levels = ordered_groups)
+    } else {
+      event_data$group <- as.factor(event_data$group)
     }
     
-    legend("topright",
-           legend = group_levels,
-           lty = 1,
-           col = 1:length(group_levels),
-           lwd = 2,
-           bty = "n")
+    surv_obj <- survival::survfit(survival::Surv(eventtime_OS, OS) ~ group, data = event_data)
+    
+    # Get the ordered groups just like in the trajectory plot
+    ordered_groups <- names(simulations$long)
+    
+    # Make sure event_data$group has the same factor levels as the trajectory plot
+    if (length(ordered_groups) > 0) {
+      event_data$group <- factor(event_data$group, levels = ordered_groups)
+    }
+    
+    # Get group levels after factoring
+    group_levels <- levels(event_data$group)
+    
+    # Get the exact same colors as used in the trajectory plot
+    colors <- group_colors()
+    
+    # Use ggsurvplot with proper error handling
+    tryCatch({
+      # Create survival object with explicitly factored groups
+      surv_obj <- survival::survfit(survival::Surv(eventtime_OS, OS) ~ group, data = event_data)
+      
+      # Use ggsurvplot with the same direct reference to group_colors()
+      # that's used in the trajectory plot
+      p <- survminer::ggsurvplot(
+        surv_obj,
+        data = event_data,
+        conf.int = input$show_ci,
+        # Use the same direct reference to colors
+        palette = unname(colors),
+        legend.title = "",
+        legend.labs = names(colors),
+        xlab = "Time", 
+        ylab = "Survival Probability",
+        legend = "bottom",
+        ggtheme = theme_bw(),
+        risk.table = FALSE,
+        mark.time = TRUE
+      )
+      
+      # Apply additional theme elements for consistency with the MRD trajectory plot
+      p$plot <- p$plot + 
+        theme(legend.position = "top",
+              legend.background = element_rect(fill = "white", color = NA),
+              legend.key = element_rect(fill = "white", color = NA))
+    }, error = function(e) {
+      # In case of error, fall back to a simpler plot
+      message("Error in survival plot: ", e$message)
+      
+      # Create a simple plot as fallback
+      simple_fit <- survival::survfit(survival::Surv(eventtime_OS, OS) ~ 1, data = event_data)
+      p <- survminer::ggsurvplot(
+        simple_fit,
+        data = event_data,
+        conf.int = FALSE,
+        palette = "blue",
+        xlab = "Time", 
+        ylab = "Survival Probability",
+        legend = "none",
+        ggtheme = theme_bw()
+      )
+    })
+    
+    print(p)
+    
   } else {
     event_data <- simData()$Event %>%
       rename(eventtime_OS = eventtime, OS = status)
     surv_obj <- survival::survfit(survival::Surv(eventtime_OS, OS) ~ 1, data = event_data)
-    plot(surv_obj,
-         xlab = "Time",
-         ylab = "Survival Probability",
-         main = "Kaplan-Meier Plot",
-         conf.int = input$show_ci,
-         lwd = 2,
-         mark.time = TRUE,
-         col = "blue")
     
-    if (input$show_ci) {
-      lines(surv_obj$time,
-            surv_obj$upper,
-            col = adjustcolor("blue", alpha.f = 0.2),
-            lty = 2)
-      lines(surv_obj$time,
-            surv_obj$lower,
-            col = adjustcolor("blue", alpha.f = 0.2),
-            lty = 2)
-    }
+    # Use ggsurvplot instead of base R plot
+    p <- survminer::ggsurvplot(
+      surv_obj,
+      data = event_data,
+      conf.int = input$show_ci,
+      palette = "blue",
+      xlab = "Time", 
+      ylab = "Survival Probability",
+      legend = "none",
+      ggtheme = theme_bw(),
+      risk.table = FALSE,
+      mark.time = TRUE
+    )
     
-    if (input$show_ci) {
-      legend("topright",
-             legend = c("Survival estimate", "95% CI"),
-             lty = c(1, 2),
-             col = c("blue", adjustcolor("blue", alpha.f = 0.2)),
-             lwd = c(2, 1),
-             bty = "n")
-    } else {
-      legend("topright",
-             legend = "Survival estimate",
-             lty = 1,
-             col = "blue",
-             lwd = 2,
-             bty = "n")
-    }
+    print(p)
   }
 })
 
