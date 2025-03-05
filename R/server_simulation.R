@@ -235,6 +235,12 @@ output$trajPlot <- renderPlot({
     geom_vline(xintercept = input$betaLong_mrd_eot, linetype = "dashed", color = "red") +
     labs(x = "Time", y = y_label, color = NULL) +
     theme_bw() +
+    theme(
+      axis.text = element_text(size = 12),
+      axis.title = element_text(size = 14),
+      legend.text = element_text(size = 12),
+      legend.title = element_text(size = 14)
+    ) +
     scale_y_continuous(trans = "log10") +
     {if(input$show_all_groups) theme(legend.position = "top") else NULL}
 })
@@ -344,9 +350,15 @@ output$eventPlot <- renderPlot({
       
       # Apply additional theme elements for consistency with the MRD trajectory plot
       p$plot <- p$plot + 
-        theme(legend.position = "top",
-              legend.background = element_rect(fill = "white", color = NA),
-              legend.key = element_rect(fill = "white", color = NA))
+        theme(
+          legend.position = "top",
+          legend.background = element_rect(fill = "white", color = NA),
+          legend.key = element_rect(fill = "white", color = NA),
+          axis.text = element_text(size = 12),
+          axis.title = element_text(size = 14),
+          legend.text = element_text(size = 12),
+          legend.title = element_text(size = 14)
+        )
     }, error = function(e) {
       # In case of error, fall back to a simpler plot
       message("Error in survival plot: ", e$message)
@@ -381,7 +393,10 @@ output$eventPlot <- renderPlot({
       xlab = "Time", 
       ylab = "Survival Probability",
       legend = "none",
-      ggtheme = theme_bw(),
+      ggtheme = theme_bw() + theme(
+        axis.text = element_text(size = 12),
+        axis.title = element_text(size = 14)
+      ),
       risk.table = FALSE,
       mark.time = TRUE
     )
