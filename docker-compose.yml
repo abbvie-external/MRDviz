@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+  mrdviz:
+    build: .
+    ports:
+      - "3838:3838"
+    restart: unless-stopped
+    volumes:
+      # Optional: create a volume for persistent data storage
+      # - ./data:/srv/shiny-server/data
+      # Uncomment the line above if you want to map a local data directory to the container
+      - ./logs:/var/log/shiny-server
+    environment:
+      - SHINY_LOG_LEVEL=INFO
