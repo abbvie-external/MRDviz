@@ -12,14 +12,17 @@ MRDviz is an R package that provides a powerful Shiny application for visualizin
 
 ## Installation
 
-You can install MRDviz from GitHub using the `devtools` package:
+You can install MRDviz from GitHub using the `remotes` package:
 
 ```R
 # Install devtools if you haven't already
-install.packages("devtools")
+install.packages("remotes")
+
+# Clone the code repository
+git clone https://pig.abbvienet.com/choikx3/MRDviz.git
 
 # Install MRDviz
-devtools::install_github("username/MRDviz")
+remotes::install_local(path = "MRDviz", dependencies = TRUE)
 ```
 
 ### Dependencies
@@ -28,11 +31,14 @@ MRDviz relies on several R packages that will be automatically installed:
 
 - shiny
 - shinyjs
+- shinydashboard
+- memoise
 - highcharter
 - data.table
+- DT
 - survival
-- ggplot2
-- And more...
+- survminer
+- tidyverse (especially ggplot2, dplyr, purrr)
 
 ## Usage
 

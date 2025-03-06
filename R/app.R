@@ -193,7 +193,33 @@ ui <- dashboardPage(
           width: 100%;
         }
         .sidebar-menu {
-          margin-bottom: 10px;
+          margin-bottom: 20px;
+          position: relative;
+          height: auto;
+          overflow: visible;
+        }
+        /* Make the main menu buttons larger */
+        .sidebar-menu > li > a {
+          padding: 15px 15px 15px 15px;
+          font-size: 24px;
+          height: 60px;
+          box-sizing: border-box;
+        }
+        /* Prevent size changes on hover */
+        .sidebar-menu > li > a:hover {
+          height: 60px;
+          box-sizing: border-box;
+        }
+        /* Add some extra emphasis to the icons */
+        .sidebar-menu > li > a > i.fa {
+          font-size: 18px;
+          margin-right: 10px;
+        }
+        /* Fix positioning of conditional panel content */
+        .sidebar-menu + .shiny-bound-output,
+        .sidebar-menu ~ div {
+          position: relative;
+          z-index: 1;
         }
       "))
     ),
