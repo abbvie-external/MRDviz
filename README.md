@@ -49,7 +49,8 @@ library(MRDviz)
 run_mrdviz()
 ```
 
-This will start the Shiny application in your default web browser, providing access to all visualization and simulation features.
+This will start the Shiny application in your default web browser, providing access to all visualization and simulation features. If you want to run the app off of a dockerized shiny-server container, see [this](README.docker.md) tutorial.
+
 
 ## License
 

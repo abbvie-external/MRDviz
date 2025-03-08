@@ -13,7 +13,7 @@ The simplest way to run the dockerized MRDviz application is using Docker Compos
 
 ```bash
 # Clone the repository (if you haven't already)
-git clone <repository-url>
+git clone https://pig.abbvienet.com/choikx3/MRDviz.git
 cd MRDviz
 
 # Build and start the container
@@ -68,13 +68,13 @@ To use a different port, modify the `ports` section in the `docker-compose.yml` 
 
 ```yaml
 ports:
-  - "8080:3838"  # Maps local port 8080 to container port 3838
+  - "8282:3838"  # Maps local port 8282 to container port 3838
 ```
 
 Or when running with the `docker run` command:
 
 ```bash
-docker run -d --name mrdviz -p 8080:3838 mrdviz
+docker run -d --name mrdviz -p 8282:3838 mrdviz
 ```
 
 ## How It Works
