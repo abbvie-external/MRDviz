@@ -1,14 +1,73 @@
-# MRD-Survival Joint Simulator
+# MRD Simulation Tutorial
 
-## Overview
-This R Shiny app simulates longitudinal minimal residual disease (MRD) trajectories and associated survival outcomes using a joint modeling approach. The app allows users to adjust various parameters to study their effects on MRD progression and patient survival.
+## Introduction
 
----
+The MRD Simulation feature in MRDviz allows you to generate synthetic Minimal Residual Disease (MRD) trajectories and associated survival outcomes using a joint modeling approach. This tutorial will guide you through the process of creating, visualizing, and analyzing simulated MRD data.
 
-## Parameters and Their Effects
+## Getting Started
+
+1. Launch MRDviz by running `library(MRDviz)` followed by `run_mrdviz()` in R
+2. Navigate to the "Simulation" tab in the main interface
+3. You'll see a panel of parameters on the left and visualization areas on the right
+
+## Basic Workflow
+
+The simulation workflow consists of these key steps:
+
+1. **Configure Parameters**: Adjust the simulation parameters to model specific clinical scenarios
+2. **Generate Simulation**: Click "Add Simulation" to create a simulation with current parameters
+3. **Visualize Results**: Examine the generated MRD trajectories and survival curves
+4. **Compare Groups**: Create multiple simulations with different parameters to compare outcomes
+5. **Export Data**: Download the simulated data for further analysis
+
+## Creating Your First Simulation
+
+1. Start with the default parameters or adjust them based on your research question
+2. Enter a descriptive name in the "Group Name" field (e.g., "Standard Treatment")
+3. Click "Add Simulation" to generate data
+4. Review the trajectory plot and survival curve that appear on the right
+5. Examine the summary statistics below each plot
+
+## Comparing Multiple Scenarios
+
+To compare different clinical scenarios:
+
+1. After creating your first simulation, modify parameters to represent an alternative scenario
+2. Enter a new group name (e.g., "Experimental Treatment")
+3. Click "Add Simulation" to add this scenario
+4. Enable "Show All Groups" to visualize both scenarios together
+5. Compare the trajectories and survival outcomes between groups
+
+## Interpreting Simulation Results
+
+### MRD Trajectory Plot
+- Each line represents one simulated patient's MRD measurements over time
+- The vertical dashed red line indicates the End-of-Treatment (EoT) time
+- The y-axis uses a log10 scale to better visualize the wide range of MRD values
+- Toggle "Show True Values" to see the underlying trajectory without measurement error
+
+### Survival Plot
+- Shows the Kaplan-Meier survival curve for simulated patients
+- Enable "Show Confidence Intervals" to display uncertainty
+- Enable "Show All Groups" for survival plots to compare groups that have been added
+- When comparing groups, different colors represent different scenarios
+- Tick marks indicate censored observations
+
+## Exporting Simulation Data
+
+You can export the simulated data for further analysis:
+
+1. Scroll down to the "Data Preview" section
+2. Use the "CSV" or "Excel" buttons to download:
+   - Trajectory data (longitudinal MRD measurements)
+   - Event data (survival outcomes)
+   - Parameter settings for each simulation group
+
+## Parameter Reference
+
+The simulation model includes parameters for both the longitudinal MRD component and the survival component. Below is a reference guide to help you understand how each parameter affects the simulation.
 
 ### **Longitudinal MRD Model Parameters**
-These parameters influence the MRD trajectories observed over time.
 
 - **Number of subjects** (`n`):  
   _Higher values simulate more patients, increasing statistical power._
@@ -70,10 +129,7 @@ These parameters influence the MRD trajectories observed over time.
 - **Relapse Growth Rate** (`betaLong_mrd_relapse_rate`):  
   _A higher rate leads to faster MRD resurgence after relapse._
 
----
-
 ### **Survival Model Parameters**
-These parameters control the survival outcome based on MRD progression.
 
 - **Binary Covariate Effect** (`betaEvent_binary`):  
   _Affects survival probability for different patient groups._
@@ -96,9 +152,8 @@ These parameters control the survival outcome based on MRD progression.
 - **Association (AUC)** (`betaEvent_assoc_auc`):  
   _Higher cumulative MRD burden over time reduces survival probability._
 
----
-
 ### **Covariate and Study Design Parameters**
+
 - **Probability for Binary Covariate (Z1)** (`prob_Z1`):  
   _Adjusts prevalence of specific patient subgroups._
 
@@ -107,3 +162,50 @@ These parameters control the survival outcome based on MRD progression.
 
 - **SD of Continuous Covariate (Z2)** (`sd_Z2`):  
   _Higher values introduce more variability in patient risk factors._
+
+- **Missing Data Rate** (`missing_data_rate`):  
+  _Controls the proportion of missing MRD measurements (0-1)._
+
+## Example Scenarios
+
+Here are some example scenarios you might want to simulate:
+
+### Scenario 1: Standard vs. Experimental Treatment
+- **Standard Treatment**: Use default parameters
+- **Experimental Treatment**: Decrease `betaLong_plateau_mean` and `betaEvent_assoc_value`
+
+### Scenario 2: High vs. Low Risk Patients
+- **Low Risk**: Decrease `betaLong_baseline_mean` and `betaEvent_intercept`
+- **High Risk**: Increase `betaLong_baseline_mean` and `betaEvent_intercept`
+
+### Scenario 3: Different Relapse Patterns
+- **Early Relapse**: Decrease `betaLong_mrd_relapse_time_mean`
+- **Late Relapse**: Increase `betaLong_mrd_relapse_time_mean`
+- **Aggressive Relapse**: Increase `betaLong_mrd_relapse_rate`
+
+## Advanced Usage
+
+### Understanding the MRD Trajectory Model
+
+The MRD trajectory model simulates three phases:
+
+1. **Initial Decay Phase** (0 to EoT): MRD decreases from baseline to plateau
+2. **Plateau Phase** (EoT to Relapse): MRD remains stable at the plateau level
+3. **Relapse Phase** (after Relapse): MRD increases exponentially if relapse occurs
+
+### Relationship Between MRD and Survival
+
+The joint model links MRD trajectories to survival through three association parameters:
+
+- **Value Association**: Current MRD level affects hazard
+- **Slope Association**: Rate of change in MRD affects hazard
+- **AUC Association**: Cumulative MRD burden affects hazard
+
+Adjusting these parameters allows you to model different hypotheses about how MRD relates to survival outcomes.
+
+## Troubleshooting
+
+- **No visible trajectories**: Check if the missing data rate is too high
+- **All patients relapse**: Reduce the relapse probability parameter
+- **Too few events**: Increase follow-up time or adjust survival parameters
+- **Error messages**: Ensure all parameters are within valid ranges

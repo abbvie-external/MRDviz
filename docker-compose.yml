@@ -4,6 +4,7 @@ services:
   mrdviz:
     build: .
     image: mrdviz:latest
+    container_name: mrdviz
     ports:
       - "3838:3838"
     restart: unless-stopped

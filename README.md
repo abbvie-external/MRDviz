@@ -74,4 +74,4 @@ We welcome contributions! Please feel free to submit a Pull Request.
 If you use MRDviz in your research, please cite:
 
 ```
-Choi, K. (2025). MRDviz: Visualization and Simulation of Minimal Residual Disease (MRD) Data. R package version 0.3.1.
+Choi, K. (2025). MRDviz: An Integrated Platform for Interactive Visualization and simulation of Measurable/Minimal Residual Disease Trajectories and Associated Survival Outcomes.
