@@ -423,6 +423,8 @@ createHeatmap <- function(filtered_data, covariate) {
       events = list(
         load = JS("function() {
           var chart = this;
+          
+          // Custom wheel event handler for scrolling
           chart.container.addEventListener('wheel', function(e) {
             e.preventDefault();
             e.stopPropagation();
@@ -439,6 +441,39 @@ createHeatmap <- function(filtered_data, covariate) {
               chart.redraw(false);
             }
           }, { passive: false });
+          
+          // Make the scrollbar visible but non-interactive
+          if (chart.yAxis && chart.yAxis[0] && chart.yAxis[0].scrollbar) {
+            var scrollbar = chart.yAxis[0].scrollbar;
+            
+            // Wait for the scrollbar to be fully rendered
+            setTimeout(function() {
+              if (scrollbar.scrollbarGroup && scrollbar.scrollbarGroup.element) {
+                // Make the entire scrollbar non-interactive
+                scrollbar.scrollbarGroup.element.style.pointerEvents = 'none';
+                
+                // Create a CSS style element for scrollbar and cell highlighting
+                var styleElement = document.createElement('style');
+                styleElement.textContent = `
+                  /* Make the entire scrollbar non-interactive */
+                  .highcharts-scrollbar { pointer-events: none !important; }
+                  .highcharts-scrollbar-track { pointer-events: none !important; }
+                  .highcharts-scrollbar-thumb { pointer-events: none !important; }
+                  .highcharts-scrollbar-arrow { pointer-events: none !important; }
+                  .highcharts-scrollbar-buttons { pointer-events: none !important; }
+                  
+                  /* Cell highlight style */
+                  .cell-highlight { 
+                    stroke: #808080 !important; 
+                    stroke-width: 2px !important;
+                    opacity: 1 !important;
+                    visibility: visible !important;
+                  }
+                `;
+                document.head.appendChild(styleElement);
+              }
+            }, 100);
+          }
         }")
       ),
       animation = FALSE
@@ -459,17 +494,26 @@ createHeatmap <- function(filtered_data, covariate) {
         events = list(
           mouseOver = JS("function() { 
             this.series.chart.container.style.cursor = 'pointer';
-            this.graphic.attr({
-              'stroke-width': 2,
-              'stroke': '#808080'
-            });
+            
+            // Add a CSS class instead of directly modifying attributes
+            if (this.graphic && this.graphic.element) {
+              // Add a highlight class
+              this.graphic.element.classList.add('cell-highlight');
+              
+              // Set a custom state flag
+              this.isHighlighted = true;
+            }
           }"),
           mouseOut = JS("function() { 
             this.series.chart.container.style.cursor = 'default';
-            this.graphic.attr({
-              'stroke-width': 0,
-              'stroke': 'none'
-            });
+            
+            // Remove the CSS class
+            if (this.graphic && this.graphic.element) {
+              this.graphic.element.classList.remove('cell-highlight');
+              
+              // Reset the custom state flag
+              this.isHighlighted = false;
+            }
           }")
         )
       )
@@ -483,7 +527,7 @@ createHeatmap <- function(filtered_data, covariate) {
       categories = full_categories,
       min = 0,
       max = 11,
-      scrollbar = list(enabled = TRUE),
+      scrollbar = list(enabled = TRUE),  # Re-enable scrollbar for visual feedback
       staticScale = 20,
       endOnTick = FALSE,
       startOnTick = FALSE
@@ -564,8 +608,26 @@ createSurvivalPlot <- function(data, endpoint) {
     subjects_data[, selected := TRUE]
   }
   
-  surv_fit <- survfit(as.formula(paste0("Surv(", time_col, ", ", status_col, " == 'Event') ~ selected")), 
-                      data = subjects_data)
+  # Detect the event indicator type by examining unique values in the status column
+  status_values <- unique(subjects_data[[status_col]])
+  
+  # Determine if we have numeric or string-based event indicators
+  if (all(status_values %in% c("0", "1", 0, 1))) {
+    # Numeric or numeric-as-string event indicators (0/1)
+    # Create formula where '1' is the event
+    surv_formula <- as.formula(paste0("Surv(", time_col, ", ", status_col, " == '1' | ", status_col, " == 1) ~ selected"))
+  } else {
+    # String-based event indicators (like "Event"/"Censor")
+    # Find the event indicator value - assume it's the less frequent value
+    status_counts <- table(subjects_data[[status_col]])
+    event_value <- names(status_counts)[which.min(status_counts)]
+    
+    # Create formula with the detected event value
+    surv_formula <- as.formula(paste0("Surv(", time_col, ", ", status_col, " == '", event_value, "') ~ selected"))
+  }
+  
+  # Create survival fit with the appropriate formula
+  surv_fit <- survfit(surv_formula, data = subjects_data)
   
   hc <- hchart(surv_fit) %>%
     hc_chart(borderWidth = 0) %>%
