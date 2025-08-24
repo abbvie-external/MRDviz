@@ -20,6 +20,7 @@ Imports:
     highcharter,
     memoise,
     survival,
+    survminer,
     jsonlite,
     DT,
     RColorBrewer,
