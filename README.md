@@ -1,7 +1,7 @@
 # MRDviz
 
-[![R-CMD-check](https://github.com/abbvie-external/MRDviz/actions/workflows/R-CMD-check.yml/badge.svg)](https://github.com/abbvie-external/MRDviz/actions/workflows/R-CMD-check.yml)
-[![Codecov test coverage](https://codecov.io/gh/abbvie-external/MRDviz/branch/main/graph/badge.svg)](https://app.codecov.io/gh/abbvie-external/MRDviz?branch=main)
+[![R-CMD-check](https://github.com/kbchoi/MRDviz/actions/workflows/R-CMD-check.yml/badge.svg)](https://github.com/kbchoi/MRDviz/actions/workflows/R-CMD-check.yml)
+[![Codecov test coverage](https://codecov.io/gh/kbchoi/MRDviz/branch/main/graph/badge.svg)](https://codecov.io/gh/kbchoi/MRDviz)
 
 MRDviz is an R package that provides a powerful Shiny application for visualizing and simulating Minimal Residual Disease (MRD) data in clinical trials. This interactive tool enables researchers and clinicians to analyze longitudinal MRD measurements, perform survival analysis, and simulate MRD trajectories.
 
@@ -23,11 +23,11 @@ You can install MRDviz from GitHub using the `remotes` package:
 install.packages("remotes")
 
 # Clone the code repository
-git clone https://github.com/abbvie-external/MRDviz
+git clone https://github.com/kbchoi/MRDviz
 
 # Install MRDviz
 remotes::install_local(path = "MRDviz", dependencies = TRUE)
-remotes::install_github("abbvie-external/MRDviz")
+remotes::install_github("kbchoi/MRDviz")
 ```
 
 ### Dependencies
