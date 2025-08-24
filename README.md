@@ -1,7 +1,7 @@
 # MRDviz
 
 [![R-CMD-check](https://github.com/kbchoi/MRDviz/actions/workflows/R-CMD-check.yml/badge.svg)](https://github.com/kbchoi/MRDviz/actions/workflows/R-CMD-check.yml)
-[![Codecov test coverage](https://codecov.io/gh/kbchoi/MRDviz/branch/main/graph/badge.svg)](https://codecov.io/gh/kbchoi/MRDviz)
+[![codecov](https://codecov.io/gh/kbchoi/MRDviz/graph/badge.svg?token=DM6HOH47OL)](https://codecov.io/gh/kbchoi/MRDviz)
 
 MRDviz is an R package that provides a powerful Shiny application for visualizing and simulating Minimal Residual Disease (MRD) data in clinical trials. This interactive tool enables researchers and clinicians to analyze longitudinal MRD measurements, perform survival analysis, and simulate MRD trajectories.
 
