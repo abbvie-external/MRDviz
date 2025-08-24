@@ -2,6 +2,8 @@
 
 export(convert_to_json)
 export(export_json)
+export(get_example_datasets)
+export(load_example_data)
 export(lognormal)
 export(mrdviz_server)
 export(plot_all_survival)

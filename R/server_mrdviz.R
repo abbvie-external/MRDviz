@@ -65,11 +65,10 @@ process_colors <- function(covariate, covariate_type, binary_pairs) {
   return(setNames(colors, covariate_values))
 }
 
-# Observe file upload and parse JSON
-observeEvent(input$datafile, {
-  req(input$datafile)
+# Function to load and process JSON data
+load_json_data <- function(json_path) {
   tryCatch({
-    datafile <- fromJSON(input$datafile$datapath, simplifyVector = FALSE)
+    datafile <- fromJSON(json_path, simplifyVector = FALSE)
     
     shared_storage$selected_subgroups <- list()
     shared_storage$clearing_filters <- FALSE
@@ -178,6 +177,8 @@ observeEvent(input$datafile, {
     
     shared_storage$data <- datafile
     
+    return(TRUE)  # Success
+    
   }, error = function(e) {
     showNotification(paste("Error loading data:", e$message), type = "error")
     shared_storage$data <- NULL
@@ -187,8 +188,24 @@ observeEvent(input$datafile, {
     shared_storage$color_map <- NULL
     shared_storage$binary_color_pairs <- NULL
     shared_storage$time_variant_covariates <- NULL
+    return(FALSE)  # Failure
   })
+}
+
+# Load preloaded file on app startup
+observe({
+  preload_file <- getOption("mrdviz_preload_file")
+  if (!is.null(preload_file) && file.exists(preload_file)) {
+    load_json_data(preload_file)
+  }
 })
+
+# Observe file upload and parse JSON
+observeEvent(input$datafile, {
+  req(input$datafile)
+  load_json_data(input$datafile$datapath)
+})
+
 
 # Filtered data reactive
 filtered_data <- reactive({

@@ -13,7 +13,7 @@ The simplest way to run the dockerized MRDviz application is using Docker Compos
 
 ```bash
 # Clone the repository (if you haven't already)
-git clone https://pig.abbvienet.com/choikx3/MRDviz.git
+git clone https://github.com/abbvie-external/MRDviz
 cd MRDviz
 
 # Build and start the container
@@ -95,11 +95,160 @@ The Docker setup for MRDviz consists of:
 
 When the container starts, it launches Shiny Server, which serves the MRDviz application at the root URL path.
 
+## Security Considerations
+
+### Running with Non-Root User (Recommended)
+
+For enhanced security, especially in production environments, you can run MRDviz without root privileges. This approach follows the principle of least privilege and reduces potential security risks.
+
+#### Option 1: Using Docker's --user flag
+
+The simplest approach is to use Docker's built-in user mapping:
+
+```bash
+# Create a local user directory for logs and data
+mkdir -p ./mrdviz-data/{logs,bookmarks}
+
+# Run with a non-root user (using your current user ID)
+docker run -d --name mrdviz \
+  --user $(id -u):$(id -g) \
+  -p 3838:3838 \
+  -v ./mrdviz-data/logs:/var/log/shiny-server \
+  -v ./mrdviz-data/bookmarks:/var/lib/shiny-server/bookmarks \
+  mrdviz
+```
+
+#### Option 2: Custom Non-Root Dockerfile
+
+For more control, create a custom Dockerfile that runs as a non-root user:
+
+```dockerfile
+# Dockerfile.nonroot
+FROM rocker/shiny:latest
+
+# Create a non-root user
+RUN groupadd -r mrdviz && useradd -r -g mrdviz -u 1001 mrdviz
+
+# Install system dependencies (as root - unavoidable during build)
+RUN apt-get update && apt-get install -y \
+    libcurl4-gnutls-dev \
+    libssl-dev \
+    libxml2-dev \
+    libv8-dev \
+    libsodium-dev \
+    libcairo2-dev \
+    libxt-dev \
+    libglpk-dev \
+    && rm -rf /var/lib/apt/lists/*
+
+# Install R packages
+RUN R -e "install.packages(c(\
+    'shiny', 'shinyjs', 'highcharter', 'memoise', 'survival', \
+    'jsonlite', 'DT', 'RColorBrewer', 'shinydashboard', 'ggplot2', \
+    'tidyr', 'purrr', 'simsurv', 'data.table', 'dplyr', \
+    'openxlsx', 'survminer', 'devtools' \
+))"
+
+# Create user directories
+RUN mkdir -p /home/mrdviz/{app,logs,bookmarks} \
+    && chown -R mrdviz:mrdviz /home/mrdviz
+
+# Copy and install MRDviz package
+COPY . /tmp/MRDviz
+RUN R -e "devtools::install('/tmp/MRDviz', upgrade = 'never')"
+
+# Create app file
+RUN echo "library(MRDviz); run_mrdviz()" > /home/mrdviz/app/app.R \
+    && chown mrdviz:mrdviz /home/mrdviz/app/app.R
+
+# Create non-root shiny-server config
+RUN echo 'run_as mrdviz;\n\
+server {\n\
+  listen 3838;\n\
+  log_dir /home/mrdviz/logs;\n\
+  app_init_timeout 180;\n\
+  app_idle_timeout 600;\n\
+  location / {\n\
+    app_dir /home/mrdviz/app;\n\
+    log_dir /home/mrdviz/logs;\n\
+    bookmark_state_dir /home/mrdviz/bookmarks;\n\
+  }\n\
+}' > /home/mrdviz/shiny-server.conf \
+    && chown mrdviz:mrdviz /home/mrdviz/shiny-server.conf
+
+# Switch to non-root user
+USER mrdviz
+WORKDIR /home/mrdviz
+
+EXPOSE 3838
+CMD ["shiny-server", "--config-file", "/home/mrdviz/shiny-server.conf"]
+```
+
+Build and run the non-root version:
+
+```bash
+# Build the non-root image
+docker build -f Dockerfile.nonroot -t mrdviz:nonroot .
+
+# Run the non-root container
+docker run -d --name mrdviz-secure \
+  -p 3838:3838 \
+  -v ./mrdviz-data/logs:/home/mrdviz/logs \
+  -v ./mrdviz-data/bookmarks:/home/mrdviz/bookmarks \
+  mrdviz:nonroot
+```
+
+#### Option 3: Docker Compose with Non-Root User
+
+Create a `docker-compose.nonroot.yml` file:
+
+```yaml
+version: '3'
+
+services:
+  mrdviz:
+    build: 
+      context: .
+      dockerfile: Dockerfile.nonroot
+    image: mrdviz:nonroot
+    container_name: mrdviz-secure
+    user: "1001:1001"  # Use the mrdviz user created in Dockerfile
+    ports:
+      - "3838:3838"
+    restart: unless-stopped
+    volumes:
+      - ./mrdviz-data/logs:/home/mrdviz/logs
+      - ./mrdviz-data/bookmarks:/home/mrdviz/bookmarks
+    environment:
+      - SHINY_LOG_LEVEL=INFO
+```
+
+Run with:
+
+```bash
+# Create data directories
+mkdir -p ./mrdviz-data/{logs,bookmarks}
+
+# Start the secure container
+docker-compose -f docker-compose.nonroot.yml up -d
+```
+
+### Additional Security Best Practices
+
+1. **Read-only filesystem**: Run containers with read-only root filesystem where possible
+2. **Resource limits**: Always set memory and CPU limits to prevent resource exhaustion
+3. **Network isolation**: Use custom Docker networks to isolate containers
+4. **Regular updates**: Keep base images and dependencies updated
+5. **Secrets management**: Never include sensitive data in images; use Docker secrets or environment variables
+
 ## Deploying to Production
 
 When deploying to a production environment, consider the following:
 
-1. **Security**: If the application will be publicly accessible, consider adding authentication or running it behind a reverse proxy with SSL.
+1. **Security**: 
+   - Use the non-root approaches described above
+   - If the application will be publicly accessible, add authentication or run behind a reverse proxy with SSL
+   - Consider using Docker secrets for sensitive configuration
 
 2. **Resource Allocation**: Allocate appropriate CPU and memory resources:
 

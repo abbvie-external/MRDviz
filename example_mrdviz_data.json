@@ -1,0 +1,120 @@
+{
+  "title": "MRD trajectories",
+  "xlab": "Time",
+  "ylab": "Measurement",
+  "covariates": {
+    "OS": {
+      "Censor": [],
+      "Event": []
+    },
+    "group": {
+      "CR": [],
+      "PR": [],
+      "SD": []
+    }
+  },
+  "time_variant_covariates": {
+    "MRD_negativity": {
+      "6": [],
+      "7": []
+    }
+  },
+  "subjects": [
+    {
+      "id": "CR_001",
+      "covariates": {
+        "Z1": "",
+        "Z2": 0.0169288365346814,
+        "eventtime_OS": 10,
+        "OS": "Censor",
+        "relapse_status": "No Relapse",
+        "relapse_time": "",
+        "group": "CR"
+      },
+      "data": [
+        {
+          "time": 0,
+          "value": 18.362858910548,
+          "Xij_1": 22.270466016901,
+          "MRD_negativity": "6"
+        },
+        {
+          "time": 2,
+          "value": 0.16783906390532,
+          "Xij_1": 0.122686794846975,
+          "MRD_negativity": "7"
+        },
+        {
+          "time": 2.37873499616981,
+          "value": 0.0925072314379062,
+          "Xij_1": 0.122686794846975,
+          "MRD_negativity": "7"
+        },
+        {
+          "time": 3.76621847376228,
+          "value": 0.204992152724657,
+          "Xij_1": 0.122686794846975,
+          "MRD_negativity": "7"
+        }
+      ]
+    },
+    {
+      "id": "PR_001",
+      "covariates": {
+        "Z1": "0",
+        "Z2": -0.225954610303375,
+        "eventtime_OS": 10,
+        "OS": "Censor",
+        "relapse_status": "Relapse",
+        "relapse_time": "6.33",
+        "group": "PR"
+      },
+      "data": [
+        {
+          "time": 0,
+          "value": 24.6146036247806,
+          "Xij_1": 22.6116557027339,
+          "MRD_negativity": "6"
+        },
+        {
+          "time": 2,
+          "value": 1.5124171672628,
+          "Xij_1": 0.944798397242893,
+          "MRD_negativity": "6"
+        },
+        {
+          "time": 4.59216896817088,
+          "value": 0.483388144286443,
+          "Xij_1": 0.944798397242893,
+          "MRD_negativity": "7"
+        },
+        {
+          "time": 6.56557096913457,
+          "value": 1.13827567211702,
+          "Xij_1": 1.20146585134279,
+          "MRD_negativity": "6"
+        }
+      ]
+    },
+    {
+      "id": "SD_001",
+      "covariates": {
+        "Z1": "1",
+        "Z2": -0.834725236257843,
+        "eventtime_OS": 0.17,
+        "OS": "Event",
+        "relapse_status": "No Relapse",
+        "relapse_time": "",
+        "group": "SD"
+      },
+      "data": [
+        {
+          "time": 0,
+          "value": 19.4295176772319,
+          "Xij_1": 19.1966883328637,
+          "MRD_negativity": "6"
+        }
+      ]
+    }
+  ]
+}

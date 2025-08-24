@@ -4,7 +4,12 @@
 \alias{run_mrdviz}
 \title{Launch the MRDviz Application}
 \usage{
-run_mrdviz()
+run_mrdviz(json_file = NULL)
+}
+\arguments{
+\item{json_file}{Character. Path to a JSON file to load automatically when the app starts.
+If NULL (default), the app starts with no data loaded. Use \code{system.file("testdata", "filename.json", package = "MRDviz")}
+to load example datasets included with the package.}
 }
 \description{
 This function launches the MRDviz Shiny application, which provides interactive
@@ -13,6 +18,14 @@ in clinical trials.
 }
 \examples{
 if (interactive()) {
+  # Launch app with no data
   run_mrdviz()
+  
+  # Launch app with example data pre-loaded
+  example_file <- system.file("testdata", "simulated_mrd.short.json", package = "MRDviz")
+  run_mrdviz(example_file)
+  
+  # Launch app with your own JSON file
+  run_mrdviz("/path/to/your/data.json")
 }
 }
