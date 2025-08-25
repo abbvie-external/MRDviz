@@ -128,7 +128,15 @@ simulation_inputs <- div(
   )
 )
 
-# Define the UI
+#' MRDviz Shiny Application User Interface
+#'
+#' The user interface for the MRDviz Shiny application, providing interactive
+#' visualization and simulation capabilities for Minimal Residual Disease (MRD) data.
+#' The UI includes two main tabs: MRD Visualization for exploring uploaded data
+#' and MRD Simulation for generating synthetic MRD datasets.
+#'
+#' @format A Shiny dashboard page object with sidebar navigation and tabbed content
+#' @export
 ui <- dashboardPage(
   skin = "blue",
   dashboardHeader(title = paste0("MRDviz v", packageVersion("MRDviz"))),
@@ -344,7 +352,17 @@ ui <- dashboardPage(
   )
 )
 
-# Define the server logic
+#' MRDviz Shiny Application Server Logic
+#'
+#' The server function for the MRDviz Shiny application, handling reactive logic
+#' for both MRD data visualization and simulation functionality. This function
+#' coordinates between the visualization and simulation modules using shared
+#' reactive storage.
+#'
+#' @param input Shiny input object containing user interface inputs
+#' @param output Shiny output object for rendering reactive outputs
+#' @param session Shiny session object for managing the user session
+#' @export
 server <- function(input, output, session) {
   # Create shared reactive values that persist across tab switches
   shared_storage <- reactiveValues(

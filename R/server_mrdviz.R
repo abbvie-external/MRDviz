@@ -314,12 +314,12 @@ filtered_data <- reactive({
             return tooltipContent;
           }
         ", 
-                                    paste(sprintf("tooltipContent += '%s: <span style=\"color: %s;\">●</span> %s<br>';", 
+                                    paste(sprintf("tooltipContent += '%s: <span style=\"color: %s;\">\\u25CF</span> %s<br>';", 
                                                   names(subject_covariates), 
                                                   sapply(names(subject_covariates), function(cov) shared_storage$color_map[[cov]][[subject_covariates[[cov]]]]),
                                                   sapply(subject_covariates, as.character)), 
                                           collapse = "\n"),
-                                    paste(sprintf("if (point.%s !== undefined) { tooltipContent += '%s: <span style=\"color: ' + %s[point.%s] + ';\">●</span> ' + point.%s + '<br>'; }", 
+                                    paste(sprintf("if (point.%s !== undefined) { tooltipContent += '%s: <span style=\"color: ' + %s[point.%s] + ';\">\\u25CF</span> ' + point.%s + '<br>'; }", 
                                                   time_variant_covariates, 
                                                   time_variant_covariates,
                                                   jsonlite::toJSON(shared_storage$time_variant_covariates),
