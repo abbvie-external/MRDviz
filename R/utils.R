@@ -3,7 +3,7 @@
 #' Creates a CSS style string for use in the Shiny app
 #' @keywords internal
 create_css_styles <- function() {
-  shiny::tags$style(HTML("
+  shiny::tags$style(shiny::HTML("
     .tag-item {
       display: inline-block;
       padding: 8px 16px;
