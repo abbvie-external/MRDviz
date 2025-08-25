@@ -23,37 +23,14 @@ jobs:
         with:
           use-public-rspm: true
 
-      - name: Install system dependencies
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y libcurl4-openssl-dev libssl-dev libxml2-dev libfontconfig1-dev libharfbuzz-dev libfribidi-dev
-
-      - name: Restore renv cache
-        uses: actions/cache@v4
+      - uses: r-lib/actions/setup-r-dependencies@v2
         with:
-          path: ~/.cache/R/renv
-          key: ${{ runner.os }}-renv-${{ hashFiles('**/renv.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-renv-
-
-      - name: Install renv and restore packages
-        run: |
-          install.packages("renv")
-          renv::restore()
-        shell: Rscript {0}
-
-      - name: Install covr for coverage
-        run: |
-          install.packages("covr")
-        shell: Rscript {0}
+          extra-packages: any::covr
+          needs: coverage
 
       - name: Test coverage and Upload to Codecov
         env:
           CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
         run: |
-          covr::codecov(
-            quiet = FALSE,
-            clean = FALSE,
-            install_path = file.path(Sys.getenv("RUNNER_TEMP"), "package")
-          )
+          covr::codecov()
         shell: Rscript {0}
