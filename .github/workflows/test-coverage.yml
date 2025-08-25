@@ -25,19 +25,12 @@ jobs:
 
       - uses: r-lib/actions/setup-r-dependencies@v2
         with:
-          extra-packages: any::covr, any::testthat
+          extra-packages: any::covr
           needs: coverage
-
-      - name: Run tests
-        run: |
-          devtools::test()
-        shell: Rscript {0}
 
       - name: Test coverage and Upload to Codecov
         env:
           CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
         run: |
-          coverage <- covr::package_coverage()
-          print(coverage)
-          covr::codecov(coverage = coverage, quiet = FALSE)
+          covr::codecov()
         shell: Rscript {0}
