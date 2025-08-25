@@ -304,7 +304,7 @@ filtered_data <- reactive({
           pointFormatter = JS(sprintf("
           function() {
             var point = this;
-            var tooltipContent = '<span style=\"color: {point.color}\">●</span> <span style=\"font-size: 14px;\"><b>Subject ID: ' + this.series.name + '</b></span><br>';
+            var tooltipContent = '<span style=\"color: {point.color}\">\\u25CF</span> <span style=\"font-size: 14px;\"><b>Subject ID: ' + this.series.name + '</b></span><br>';
             tooltipContent += '<br><b>Baseline covariates:</b><br>';
             %s
             tooltipContent += '<br><b>Time-variant covariates:</b><br>';
