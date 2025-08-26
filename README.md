@@ -21,12 +21,8 @@ You can install MRDviz from GitHub using the `remotes` package:
 # Install devtools if you haven't already
 install.packages("remotes")
 
-# Clone the code repository
-git clone https://github.com/kbchoi/MRDviz
-
 # Install MRDviz
-remotes::install_local(path = "MRDviz", dependencies = TRUE)
-remotes::install_github("kbchoi/MRDviz")
+remotes::install_github("abbvie-external/MRDviz")
 ```
 
 ### Dependencies
