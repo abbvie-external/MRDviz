@@ -28,10 +28,13 @@ http://localhost:3838
 
 ## Manual Docker Setup
 
-If you prefer not to use Docker Compose, you can build and run the container manually:
+If you prefer not to use Docker Compose, you can pull (or build) and run the container manually:
 
 ```bash
-# Build the Docker image
+# Pull the Docker image
+docker pull ghcr.io/abbvie-external/mrdviz
+
+# Or build the Docker image
 docker build -t mrdviz .
 
 # Run the container
